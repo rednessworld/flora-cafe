@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada — FLORA</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .error-page {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--sp-8) var(--pad-x);
+      background: var(--cream);
+    }
+    .error-page__brand {
+      font-family: var(--font-heading);
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: -0.01em;
+      margin-bottom: var(--sp-10);
+      text-decoration: none;
+    }
+    .error-page__code {
+      font-family: var(--font-heading);
+      font-size: clamp(6rem, 20vw, 10rem);
+      font-weight: 700;
+      color: var(--cream-dim);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      margin-bottom: var(--sp-5);
+    }
+    .error-page__heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-4);
+    }
+    .error-page__text {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 40ch;
+      margin: 0 auto var(--sp-8);
+    }
+    .error-page__actions {
+      display: flex;
+      gap: var(--sp-3);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="error-page" role="main">
+    <a href="/" class="error-page__brand" aria-label="FLORA — Volver al inicio">FLORA</a>
+    <p class="error-page__code" aria-hidden="true">404</p>
+    <h1 class="error-page__heading">Página no encontrada</h1>
+    <p class="error-page__text">La página que buscas no existe o ha sido movida. Vuelve al inicio para descubrir nuestro brunch, pasta y café.</p>
+    <div class="error-page__actions">
+      <a href="/" class="btn btn--primary">Volver al inicio</a>
+      <a href="/#find-us" class="btn btn--outline">Encuéntranos</a>
+    </div>
+  </main>
+</body>
+</html>

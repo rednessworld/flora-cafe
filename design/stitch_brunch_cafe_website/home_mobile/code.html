@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'Artisan Brunch</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#9bf0fa",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#006970",
+                        "surface-container": "#f3eed9",
+                        "primary-container": "#3b9ea7",
+                        "primary-fixed": "#94f1fb",
+                        "primary": "#006970",
+                        "secondary-container": "#fdc400",
+                        "surface-dim": "#dfdac6",
+                        "on-primary-fixed-variant": "#004f55",
+                        "on-primary-fixed": "#002022",
+                        "surface-container-high": "#ede8d3",
+                        "surface-bright": "#fffae4",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1d1c0f",
+                        "background": "#fffae4",
+                        "deep-teal": "#2A6E75",
+                        "warm-sand": "#EFEAD5",
+                        "surface-variant": "#e8e3ce",
+                        "on-surface-variant": "#3e494a",
+                        "primary-fixed-dim": "#77d5de",
+                        "on-tertiary-fixed-variant": "#004f55",
+                        "inverse-on-surface": "#f6f1dc",
+                        "secondary-fixed": "#ffdf96",
+                        "inverse-primary": "#77d5de",
+                        "tertiary-fixed-dim": "#7ed4dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#002023",
+                        "secondary": "#765a00",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#bdc9ca",
+                        "on-primary-container": "#002f33",
+                        "on-secondary-container": "#6c5200",
+                        "inverse-surface": "#333123",
+                        "surface": "#fffae4",
+                        "outline": "#6e797a",
+                        "on-tertiary-container": "#f5feff",
+                        "canvas": "#FFFFFF",
+                        "surface-container-highest": "#e8e3ce",
+                        "tertiary-container": "#1e8089",
+                        "on-secondary-fixed-variant": "#594400",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-container-low": "#f9f4df",
+                        "secondary-fixed-dim": "#f6bf00",
+                        "tertiary": "#00666e",
+                        "error": "#ba1a1a",
+                        "on-background": "#1d1c0f",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(255, 250, 228, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-pattern {
+            background-color: #fffae4;
+            background-image: radial-gradient(#dfdac6 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 105, 112, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- Mobile Navigation Shell -->
+<header class="glass-nav sticky top-0 z-50 w-full border-b-0 shadow-sm transition-all duration-300 md:hidden">
+<div class="flex justify-between items-center w-full px-margin-mobile py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md text-primary tracking-tight" href="#">L'Artisan Brunch</a>
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="text-primary hover:bg-surface-container-high/50 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</div>
+<!-- Hidden Mobile Menu Dropdown -->
+<nav class="hidden flex-col bg-surface shadow-lg absolute w-full left-0 top-full p-4 gap-4 border-t border-surface-variant">
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-primary py-2 transition-colors" href="#">Our Story</a>
+<a class="text-primary font-bold border-b-2 border-secondary inline-block py-2" href="#">Menu</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-primary py-2 transition-colors" href="#">Gallery</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-primary py-2 transition-colors" href="#">Find Us</a>
+<a class="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg px-6 py-3 rounded-full text-center mt-2 font-semibold" href="#">Book a Table</a>
+</nav>
+</header>
+<!-- Desktop Navigation Shell -->
+<header class="glass-nav sticky top-0 z-50 w-full shadow-sm hidden md:flex transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md text-primary tracking-tight" href="#">L'Artisan Brunch</a>
+<nav class="flex items-center gap-8">
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-primary transition-colors hover:bg-surface-container-high/50 px-3 py-2 rounded-lg" href="#">Our Story</a>
+<a class="text-primary font-bold border-b-2 border-secondary font-label-lg text-label-lg px-3 py-2" href="#">Menu</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-primary transition-colors hover:bg-surface-container-high/50 px-3 py-2 rounded-lg" href="#">Gallery</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg hover:text-primary transition-colors hover:bg-surface-container-high/50 px-3 py-2 rounded-lg" href="#">Find Us</a>
+</nav>
+<a class="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg px-6 py-3 rounded-full font-semibold hover:bg-secondary-fixed transition-colors shadow-sm scale-95 hover:scale-100 active:scale-90 duration-300" href="#">Book a Table</a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-pattern pt-12 pb-20 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="z-10 flex flex-col items-start gap-6">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface leading-tight">
+                        Lunch to <br/> <span class="text-primary italic">the rescue!</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        We’ll prepare something special for you. You’ve earned it. Handcrafted pastries and hearty pastas await.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full font-semibold shadow-md hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center gap-2" href="#">
+                            Order on Wolt
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="border-2 border-primary text-primary font-label-lg text-label-lg px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-on-primary transition-all" href="#">
+                            Locations
+                        </a>
+</div>
+<div class="flex items-center gap-6 mt-8 pt-8 border-t border-surface-variant w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg font-bold">4.6/5</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider ml-1">TripAdvisor</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-lg text-label-lg font-bold">4.3/5</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider ml-1">Google</span>
+</div>
+</div>
+</div>
+<div class="relative z-0 h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden card-shadow bg-surface-container-lowest">
+<img alt="" class="w-full h-full object-cover rounded-[2rem]" src="https://lh3.googleusercontent.com/aida/ADBb0uhyX1JYIsqAVXlwaSxkX24n-HHjXUMCUZwCa4NCqeNVkDE6nRFmRuHcz5Nbg4O1bXRUUpcWw_jncie8pP6wkjzhIMpOO4_a5i8WZb-zs_sptGSVrKPse2pgDtPZ2EITmCcYr8-GCAHW91GzISswBvK54quox0evH18p_GLKDl7WMtIHPgHhGGp-FHmzKDGv6tLgNH7wynkfSvDxqGo-v_ziMFxDxKgTIfxEu5rH4kEjPuXKfI0kDb4DX6vk"/>
+</div>
+</div>
+</section>
+<!-- Croissants Category Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative">
+<div class="max-w-container-max mx-auto">
+<div class="mb-12 text-center md:text-left max-w-2xl">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-4">Croissants</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">The buttery King of the continental breakfast. Find your favourite variety, baked fresh daily.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Item 1 -->
+<div class="bg-surface rounded-2xl p-6 card-shadow border border-warm-sand flex flex-col gap-4 group hover:-translate-y-1 transition-transform duration-300">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container flex items-center justify-center p-4">
+<img alt="A perfectly baked, golden-brown croissant dusted with a delicate layer of powdered sugar, resting on a dark, textured artisan plate. The setting is bright and minimalist, highlighting the flaky layers of the pastry against a stark white background." class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A perfectly baked, golden-brown croissant dusted with a delicate layer of powdered sugar, resting on a dark, textured artisan plate. The setting is bright and minimalist, highlighting the flaky layers of the pastry against a stark white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrjuC-utnbXLUNwhdelzejO9wbRjSVe-HzZKqUS-BG_DjDQsOk3wLytV0yagQdwp-yzUBbgGv2gVXSzrI0n9cziWkBG8FKlHgBACreaIQ2I3Mzy3hy28ux5G_q-kybKMCDwDrFy4ag_p2thmhm6jZP-CUr4xXIjLDo_RkkUaSPXomfj0IP9ni0cADXvrHu-Jzo5XO2-6sL1QKOkGb_fuz97IQ4Dt4a7xNsR3CqQruEXsRKyzLeoHeDGe7PJ2Fu5hfEqv19B6ZVTykB"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-semibold text-on-surface mb-1">Custard Croissant</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Classic flaky pastry filled with rich, vanilla bean custard.</p>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary bg-primary-container/20 px-3 py-1 rounded-full whitespace-nowrap ml-4">€4.50</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface rounded-2xl p-6 card-shadow border border-warm-sand flex flex-col gap-4 group hover:-translate-y-1 transition-transform duration-300">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container flex items-center justify-center p-4">
+<img alt="A flaky, golden croissant generously filled and drizzled with a vibrant green pistachio cream, topped with crushed pistachio nuts. The pastry sits elegantly on a light surface, captured with soft, natural light that emphasizes its artisanal quality and inviting texture." class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A flaky, golden croissant generously filled and drizzled with a vibrant green pistachio cream, topped with crushed pistachio nuts. The pastry sits elegantly on a light surface, captured with soft, natural light that emphasizes its artisanal quality and inviting texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsho4mSvnpkISFgdMCHlnxxYNxiXcFkRBJp6VEiRqflesrxtbj7rSCNvb1k3cuWBYTAhApJ6yF_2GBv3nhcnNvV0D91fr-beSaI7P9481E6hYlU0uk8z4SBqQaAZMqk4zo9WRu-7UzBCgNc8sAt_l01bHTAH3BaFTBweQXu2jFyp2NAi7y3yz-9XwdeHcKaIGGa4R5jhSt73gYI6jchUy98WBD_y56tUugLWu4C4-t5GCnYxO2JlriZzosm9FIb7QMBKgq5IeiVdcU"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-semibold text-on-surface mb-1">Pistacchio Croissant</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Filled with authentic Sicilian pistachio cream.</p>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary bg-primary-container/20 px-3 py-1 rounded-full whitespace-nowrap ml-4">€5.00</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface rounded-2xl p-6 card-shadow border border-warm-sand flex flex-col gap-4 group hover:-translate-y-1 transition-transform duration-300">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container flex items-center justify-center p-4">
+<img alt="A rich, dark chocolate croissant with visible, melty chocolate peeking through its flaky, buttery layers. Placed on a minimalist ceramic plate against a bright, clean background, the image evokes a warm, comforting morning indulgence in a modern café setting." class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A rich, dark chocolate croissant with visible, melty chocolate peeking through its flaky, buttery layers. Placed on a minimalist ceramic plate against a bright, clean background, the image evokes a warm, comforting morning indulgence in a modern café setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYSTTL-naaRgG8NoPRhatvYkIb24J19-GXf_3ZBT3UD63eTOT28VIYwuw32V14v3izuB5vtLcU_u98IlRps2CQ-9ZlEaGaaJkI0d7T_31V7L9vCdsGTe-OesNNykVwY2_uGzdiAX9-BoCHkVj9Z_5UmTWBiRF0TNTnki6G-Pjh5A9Rc4LA3YuI28Pu4_7utehH_cXWJWRnJ46EfET6Z3uso0dUCsGDiUUO8gEuFOqjTbrUKtOhJBJJGIowiVtXqFUagoKGWBhBZV78"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-semibold text-on-surface mb-1">Chocolate Croissant</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Dark chocolate batons wrapped in buttery pastry dough.</p>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary bg-primary-container/20 px-3 py-1 rounded-full whitespace-nowrap ml-4">€4.80</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pasta Category Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-surface-container">
+<div class="max-w-container-max mx-auto">
+<div class="mb-12 text-center md:text-left max-w-2xl">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-4">Pasta</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Delicious pasta dishes made with fresh, authentic ingredients for a perfect midday escape.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Featured Pasta -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 card-shadow border border-surface-variant flex flex-col md:flex-row gap-8 items-center group">
+<div class="w-full md:w-1/2 aspect-square rounded-2xl overflow-hidden bg-surface-container flex items-center justify-center p-4">
+<img alt="A rustic, overhead shot of a generous portion of penne pasta coated in a creamy, vibrant green pistachio sauce. The dish is presented in an elegant, dark blue artisan bowl, contrasting beautifully with the bright sauce, set against a pristine white background." class="w-full h-full object-contain mix-blend-multiply group-hover:rotate-2 transition-transform duration-700" data-alt="A rustic, overhead shot of a generous portion of penne pasta coated in a creamy, vibrant green pistachio sauce. The dish is presented in an elegant, dark blue artisan bowl, contrasting beautifully with the bright sauce, set against a pristine white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUTsOu2aJonivzCJ_ulV_q9Tk39yyNV2oKHhZ2W3EjryAWRcez6M7AMr1rXB_Q67ZsxySV22OsLAEaTJ1vkPBwsYQ3MH8z6w1M2bS9HOIY5UAATODQq0nQLFoHn-8vbnzSs5JoUk__P34YvbapeqZV_lv4Ukn_1ARD6VM__U07CNQbWVbry-w3EyMA-S8l1E1_SwYjmGOGUie6du7O2M2Nd3zUDAK5DEtLSLrvM4nQX9H-x_ePyK5h9AHiArjUkvYixSya0KqR-lku"/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-widest text-tertiary font-bold bg-tertiary-container/10 self-start px-3 py-1 rounded-full">Chef's Signature</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">Pistacchiosa</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A decadent blend of artisan penne enveloped in our signature creamy pistachio sauce, topped with crushed roasted pistachios for texture.</p>
+<div class="flex items-center gap-4 mt-2">
+<span class="font-headline-md text-[28px] font-bold text-primary">€16.50</span>
+<button class="ml-auto w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center hover:bg-secondary-fixed transition-colors shadow-sm">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pasta List -->
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-lowest rounded-2xl p-6 card-shadow border border-surface-variant flex justify-between items-center hover:border-primary transition-colors cursor-pointer group">
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-on-surface group-hover:text-primary transition-colors">Carbonara</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Guanciale, pecorino romano, egg yolk, black pepper.</p>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary">€14.00</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 card-shadow border border-surface-variant flex justify-between items-center hover:border-primary transition-colors cursor-pointer group">
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-on-surface group-hover:text-primary transition-colors">Amatriciana</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Tomato sauce, guanciale, pecorino romano, chili.</p>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary">€14.50</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 card-shadow border border-surface-variant flex justify-between items-center hover:border-primary transition-colors cursor-pointer group">
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-on-surface group-hover:text-primary transition-colors">Parmigiana</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Layered eggplant, rich tomato basil sauce, mozzarella, parmesan.</p>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary">€15.00</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 card-shadow border border-surface-variant flex justify-between items-center hover:border-primary transition-colors cursor-pointer group">
+<div>
+<h4 class="font-headline-md text-[20px] font-semibold text-on-surface group-hover:text-primary transition-colors">Pesto</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Fresh basil, pine nuts, garlic, parmesan, olive oil.</p>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary">€13.50</span>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="inline-flex items-center gap-2 border-b-2 border-primary text-primary font-label-lg text-label-lg font-bold pb-1 hover:text-deep-teal hover:border-deep-teal transition-colors" href="#">
+                        View Full Menu
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-deep-teal text-surface-container-lowest text-center relative overflow-hidden">
+<!-- Decorative quote mark -->
+<span class="material-symbols-outlined absolute top-10 left-1/2 -translate-x-1/2 text-[120px] opacity-10" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="max-w-3xl mx-auto relative z-10 flex flex-col items-center">
+<h2 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg mb-8 text-secondary-fixed">We’re feeders and pleasers</h2>
+<div class="w-full">
+<p class="font-headline-md text-[24px] leading-[36px] font-medium italic mb-8">
+                        "La Crema has become like a second home to me. The friendly team have made me feel welcome from day one. Definitely my favourite place to be."
+                    </p>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-tint flex items-center justify-center text-on-primary font-bold font-label-lg text-label-lg">
+                            SA
+                        </div>
+<div class="text-left">
+<p class="font-label-lg text-label-lg font-bold text-on-primary">Steve Abela</p>
+<p class="font-label-md text-label-md text-tertiary-fixed-dim">Local Regular</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2 mt-8">
+<button aria-label="Previous Testimonial" class="w-10 h-10 rounded-full border border-tertiary-fixed/30 flex items-center justify-center text-tertiary-fixed hover:bg-tertiary-fixed hover:text-deep-teal transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button aria-label="Next Testimonial" class="w-10 h-10 rounded-full border border-tertiary-fixed/30 flex items-center justify-center text-tertiary-fixed hover:bg-tertiary-fixed hover:text-deep-teal transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4">
+<a class="text-headline-md font-headline-md text-primary dark:text-tertiary-fixed tracking-tight" href="#">L'Artisan Brunch</a>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant/80 max-w-xs">
+                    Located in the vibrant center, serving up coffee and pastries infused with the essence of Mediterranean style and taste.
+                </p>
+</div>
+<!-- Links Column -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Explore</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Press Kit</a>
+<a class="text-body-md font-body-md text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</nav>
+</div>
+<!-- Contact/Social Column -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Join our community</h4>
+<div class="flex gap-4">
+<a aria-label="Facebook" class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined">thumb_up</span>
+</a>
+<a aria-label="Instagram" class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a aria-label="TripAdvisor" class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined">flight</span>
+</a>
+</div>
+<a class="inline-flex items-center gap-2 mt-2 text-primary font-label-lg text-label-lg hover:underline" href="#">
+<span class="material-symbols-outlined text-[20px]">call</span>
+                     +356 7922 2414
+                 </a>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 px-margin-desktop py-6 text-center">
+<p class="text-label-md font-label-md text-on-surface-variant dark:text-on-surface-variant/80">© 2024 L'Artisan Brunch. Handcrafted with care.</p>
+</div>
+</footer>
+<!-- Floating Mobile Action Bar (Contextual FAB) -->
+<div class="fixed bottom-0 left-0 w-full bg-primary p-4 shadow-[0_-10px_40px_rgba(0,105,112,0.2)] md:hidden z-40 flex justify-between items-center rounded-t-2xl">
+<div class="text-on-primary">
+<p class="font-label-md text-label-md opacity-80 uppercase tracking-wider">Quick Order</p>
+<p class="font-label-lg text-label-lg font-bold">Via WhatsApp</p>
+</div>
+<a class="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg px-6 py-3 rounded-full font-bold shadow-md active:scale-95 transition-transform flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+            Message
+        </a>
+</div>
+</body></html>

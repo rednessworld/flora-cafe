@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>FLORA — Brunch · Pasta · Café en Barcelona</title>
+  <meta name="description" content="FLORA es un café artesanal en Barcelona especializado en brunch mediterráneo, pasta fresca y café de especialidad. Croissants horneados cada mañana.">
+  <link rel="canonical" href="https://flora-bcn.vercel.app">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FLORA — Brunch · Pasta · Café en Barcelona">
+  <meta property="og:description" content="Croissants horneados cada mañana, pasta hecha a mano y café de especialidad. FLORA, Barcelona.">
+  <meta property="og:image" content="https://flora-bcn.vercel.app/images/exterior.webp">
+  <meta property="og:url" content="https://flora-bcn.vercel.app">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FLORA — Brunch · Pasta · Café en Barcelona">
+  <meta name="twitter:image" content="https://flora-bcn.vercel.app/images/exterior.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Preconnect — GTM loads after cookie consent; pre-warm the connection -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Preload hero poster — LCP candidate; fetchpriority="high" maximises priority -->
+  <link rel="preload" as="image" href="images/exterior.webp" fetchpriority="high">
+
+  <!-- Preload heading font -->
+  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+
+  <!-- UPDATE: Replace G-XXXXXXXXXX with the real GA4 Measurement ID before launch -->
+  <script>window.GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';</script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "FLORA",
+    "url": "https://flora-bcn.vercel.app",
+    "image": "https://flora-bcn.vercel.app/images/exterior.webp",
+    "telephone": "+34600000000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "<!-- UPDATE -->",
+      "postalCode": "<!-- UPDATE -->",
+      "addressLocality": "Barcelona",
+      "addressCountry": "ES"
+    },
+    "servesCuisine": ["Brunch", "Pasta", "Café"],
+    "priceRange": "€€",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Wednesday", "Thursday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.8,
+      "reviewCount": 89
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============================================================
+     LOADING SCREEN — shows on first visit only
+     ============================================================ -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <span class="loader__name">FLORA</span>
+    <span class="loader__sub">Brunch · Pasta · Café</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SKIP NAVIGATION
+     ============================================================ -->
+<a href="#main" class="skip-nav" data-i18n="skip.nav">Ir al contenido principal</a>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="nav" aria-label="Navegación principal" data-i18n-aria="nav.aria">
+  <div class="nav__inner container">
+
+    <!-- Logo -->
+    <a href="#" class="nav__logo" aria-label="FLORA — Inicio">FLORA</a>
+
+    <!-- Desktop links + mobile overlay -->
+    <ul class="nav__links" id="nav-links" role="list" aria-hidden="true">
+      <li><a href="#about" data-i18n="nav.about">Nosotros</a></li>
+      <li><a href="#menu" data-i18n="nav.menu">Carta</a></li>
+      <li><a href="#gallery" data-i18n="nav.gallery">Galería</a></li>
+      <li><a href="#find-us" data-i18n="nav.find">Encuéntranos</a></li>
+      <!-- Mobile-only items -->
+      <li class="nav__mobile-extra">
+        <div class="nav__lang" role="group" aria-label="Idioma">
+          <button class="lang-btn lang-btn--active" data-lang="es" aria-pressed="true">ES</button>
+          <button class="lang-btn" data-lang="ca" aria-pressed="false">CA</button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </li>
+      <li class="nav__mobile-extra">
+        <a href="#find-us" class="btn btn--cta" data-i18n="nav.reserve">Reservar</a>
+      </li>
+    </ul>
+
+    <!-- Desktop right: lang + CTA -->
+    <div class="nav__right">
+      <div class="nav__lang nav__lang--desktop" role="group" aria-label="Idioma">
+        <button class="lang-btn lang-btn--active" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" data-lang="ca" aria-pressed="false">CA</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#find-us" class="btn btn--cta" data-i18n="nav.reserve">Reservar</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button
+      class="nav__toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-links"
+      aria-label="Abrir menú"
+      data-i18n-aria="nav.toggle.open">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- SR-only H1 — visible heading is in each section -->
+<h1 class="sr-only">FLORA Cafe — Brunch, Pasta y Café en Barcelona</h1>
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<main id="main">
+
+<!-- ─── HERO ──────────────────────────────────────────────── -->
+<section id="hero">
+
+  <!-- Video background — poster="exterior.webp" shows while video loads or if autoplay fails -->
+  <div class="hero__bg" aria-hidden="true">
+    <video
+      id="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="images/exterior.webp">
+      <source src="images/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+  </div>
+
+  <!-- Hero content -->
+  <div class="hero__content">
+    <img
+      src="images/logo.webp"
+      alt="FLORA"
+      class="hero__logo"
+      width="220"
+      height="88"
+      fetchpriority="high"
+      loading="eager"
+      decoding="sync">
+    <p class="hero__tagline" data-i18n="hero.tagline">Brunch · Pasta · Café</p>
+    <div class="hero__actions">
+      <a href="#menu" class="btn btn--cta" data-i18n="hero.cta">Ver la carta</a>
+      <a href="#find-us" class="btn btn--ghost" data-i18n="hero.cta2">Encuéntranos</a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero__scroll" aria-hidden="true">
+    <div class="hero__scroll-mouse">
+      <div class="hero__scroll-dot"></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ─── ABOUT ─────────────────────────────────────────────── -->
+<section id="about" class="section">
+  <div class="container about__grid">
+
+    <!-- Image (moves to left on desktop) -->
+    <div class="about__image-wrap">
+      <picture>
+        <source srcset="images/interior.webp" type="image/webp">
+        <img
+          src="images/interior.jpg"
+          alt="El cálido interior de FLORA Cafe, con luz natural y detalles artesanales"
+          class="about__image reveal--scale"
+          loading="lazy"
+          decoding="async"
+          width="800"
+          height="600">
+      </picture>
+    </div>
+
+    <!-- Text -->
+    <div class="about__text">
+      <span class="section-label reveal" data-i18n="about.label">Nuestra historia</span>
+      <h2 class="reveal--heading" data-i18n="about.heading">Una pausa que merece la pena</h2>
+      <p class="reveal" style="transition-delay:80ms" data-i18n="about.p1">FLORA nació de una idea sencilla: la mejor parte del día merece la mejor comida. Horneamos nuestros croissants frescos cada mañana, hacemos la pasta a mano y preparamos un café del que nos sentimos orgullosos.</p>
+      <p class="reveal" style="transition-delay:160ms" data-i18n="about.p2">Nuestro espacio está diseñado para quedarse — luz natural, texturas cálidas y un equipo que trata a cada cliente como si fuera de la casa. Ven a desayunar, quédate a comer.</p>
+      <a href="#menu" class="btn btn--primary reveal" style="transition-delay:240ms" data-i18n="about.cta">Ver la carta</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── MENU ──────────────────────────────────────────────── -->
+<section id="menu" class="section section--tinted">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-label reveal" data-i18n="menu.label">Lo que servimos</span>
+      <h2 class="reveal--heading" data-i18n="menu.heading">La Carta</h2>
+    </div>
+
+    <!-- Tab list -->
+    <div class="menu__tabs" role="tablist" aria-label="Categorías del menú" data-i18n-aria="menu.tabs.aria">
+      <button class="menu__tab menu__tab--active" role="tab" aria-selected="true" aria-controls="panel-croissants" id="tab-croissants" data-i18n="menu.tab.croissants">Croissants</button>
+      <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-pasta" id="tab-pasta" tabindex="-1" data-i18n="menu.tab.pasta">Pasta</button>
+      <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-drinks" id="tab-drinks" tabindex="-1" data-i18n="menu.tab.drinks">Bebidas</button>
+    </div>
+
+    <!-- Tab panels -->
+    <div class="menu__panels">
+
+      <!-- Croissants -->
+      <div id="panel-croissants" role="tabpanel" aria-labelledby="tab-croissants">
+        <div class="menu__cards stagger-group">
+
+          <article class="menu-card reveal">
+            <div class="menu-card__img-wrap">
+              <picture>
+                <source srcset="images/food1.webp" type="image/webp">
+                <img src="images/food1.jpg" alt="Croissant de natilla con crema de vainilla" loading="lazy" decoding="async" width="400" height="400">
+              </picture>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Custard</h3>
+                <span class="menu-card__price">€4.50</span>
+              </div>
+              <p class="menu-card__desc">Croissant clásico de mantequilla relleno de crema de vainilla.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card__img-wrap">
+              <picture>
+                <source srcset="images/food2.webp" type="image/webp">
+                <img src="images/food2.jpg" alt="Croissant de pistacho con crema siciliana" loading="lazy" decoding="async" width="400" height="400">
+              </picture>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Pistacchio</h3>
+                <span class="menu-card__price">€5.00</span>
+              </div>
+              <p class="menu-card__desc">Relleno con auténtica crema de pistacho siciliano.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card__img-wrap">
+              <picture>
+                <source srcset="images/food3.webp" type="image/webp">
+                <img src="images/food3.jpg" alt="Croissant de chocolate con chocolate negro" loading="lazy" decoding="async" width="400" height="400">
+              </picture>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Chocolate</h3>
+                <span class="menu-card__price">€4.80</span>
+              </div>
+              <p class="menu-card__desc">Barras de chocolate negro envueltas en masa de hojaldre mantecosa.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card__img-wrap">
+              <picture>
+                <source srcset="images/food4.webp" type="image/webp">
+                <img src="images/food4.jpg" alt="Croissant de mantequilla clásico" loading="lazy" decoding="async" width="400" height="400">
+              </picture>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Mantequilla</h3>
+                <span class="menu-card__price">€3.80</span>
+              </div>
+              <p class="menu-card__desc">Croissant clásico francés de mantequilla, horneado fresco cada mañana.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Pasta -->
+      <div id="panel-pasta" role="tabpanel" aria-labelledby="tab-pasta" class="menu__panel--hidden">
+
+        <!-- Featured pasta -->
+        <article class="pasta-featured reveal">
+          <div class="pasta-featured__img-wrap">
+            <picture>
+              <source srcset="images/food5.webp" type="image/webp">
+              <img src="images/food5.jpg" alt="Pasta Pistacchiosa — penne con crema de pistacho y pistachos tostados" loading="lazy" decoding="async" width="600" height="600">
+            </picture>
+          </div>
+          <div class="pasta-featured__body">
+            <span class="pasta-badge">Chef&rsquo;s Signature</span>
+            <h3 class="pasta-featured__name">Pistacchiosa</h3>
+            <p class="pasta-featured__desc">Artisan penne en nuestra emblemática crema de pistacho, coronado con pistachos tostados y triturados para dar textura. Un plato que enamora.</p>
+            <span class="pasta-featured__price">€16.50</span>
+          </div>
+        </article>
+
+        <!-- Pasta list -->
+        <div class="pasta-list stagger-group">
+
+          <article class="pasta-item reveal">
+            <div class="pasta-item__body">
+              <h3 class="pasta-item__name">Carbonara</h3>
+              <p class="pasta-item__desc">Guanciale, pecorino romano, yema de huevo, pimienta negra.</p>
+            </div>
+            <span class="pasta-item__price">€14.00</span>
+          </article>
+
+          <article class="pasta-item reveal">
+            <div class="pasta-item__body">
+              <h3 class="pasta-item__name">Amatriciana</h3>
+              <p class="pasta-item__desc">Salsa de tomate, guanciale, pecorino romano, guindilla.</p>
+            </div>
+            <span class="pasta-item__price">€14.50</span>
+          </article>
+
+          <article class="pasta-item reveal">
+            <div class="pasta-item__body">
+              <h3 class="pasta-item__name">Parmigiana</h3>
+              <p class="pasta-item__desc">Berenjenas en capas, salsa de tomate, mozzarella, parmesano.</p>
+            </div>
+            <span class="pasta-item__price">€15.00</span>
+          </article>
+
+          <article class="pasta-item reveal">
+            <div class="pasta-item__body">
+              <h3 class="pasta-item__name">Pesto</h3>
+              <p class="pasta-item__desc">Albahaca fresca, piñones, ajo, parmesano, aceite de oliva virgen extra.</p>
+            </div>
+            <span class="pasta-item__price">€13.50</span>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Bebidas -->
+      <div id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" class="menu__panel--hidden">
+        <div class="menu__cards stagger-group">
+
+          <article class="menu-card reveal">
+            <div class="menu-card__img-wrap">
+              <picture>
+                <source srcset="images/drink1.webp" type="image/webp">
+                <img src="images/drink1.jpg" alt="Cappuccino con latte art sobre cerámica artesanal" loading="lazy" decoding="async" width="400" height="400">
+              </picture>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Cappuccino</h3>
+                <span class="menu-card__price">€3.50</span>
+              </div>
+              <p class="menu-card__desc">Espresso de especialidad con microespuma de leche perfecta.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card__img-wrap">
+              <picture>
+                <source srcset="images/drink2.webp" type="image/webp">
+                <img src="images/drink2.jpg" alt="Matcha latte con leche de avena en vaso alto" loading="lazy" decoding="async" width="400" height="400">
+              </picture>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Matcha Latte</h3>
+                <span class="menu-card__price">€4.50</span>
+              </div>
+              <p class="menu-card__desc">Matcha ceremonial con leche de avena, caliente o frío.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card__img-wrap">
+              <picture>
+                <source srcset="images/drink3.webp" type="image/webp">
+                <img src="images/drink3.jpg" alt="Zumo de naranja recién exprimido en vaso de cristal" loading="lazy" decoding="async" width="400" height="400">
+              </picture>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Zumo de Naranja</h3>
+                <span class="menu-card__price">€4.00</span>
+              </div>
+              <p class="menu-card__desc">Naranjas valencianas recién exprimidas, servido al momento.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card__img-wrap menu-card__img-wrap--plain">
+              <div class="menu-card__img-placeholder" aria-hidden="true"></div>
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Café Filtro</h3>
+                <span class="menu-card__price">€2.80</span>
+              </div>
+              <p class="menu-card__desc">Café de origen único por goteo, preparado al momento.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div><!-- /.menu__panels -->
+  </div>
+</section>
+
+<!-- ─── GALLERY ────────────────────────────────────────────── -->
+<section id="gallery" class="section">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-label reveal" data-i18n="gallery.label">La experiencia</span>
+      <h2 class="reveal--heading" data-i18n="gallery.heading">Un anticipo de lo que te espera</h2>
+    </div>
+
+    <!--
+      3-col grid, auto-placement pattern:
+      Row 1: wide(1) + normal(2)
+      Row 2: normal(3) + wide(4)
+      Row 3: normal(5) + normal(6) + normal(7)
+      Row 4: wide(8) + normal(9)
+      Row 5: normal(10) + normal(11) + normal(12)
+    -->
+    <div class="gallery__grid stagger-group">
+
+      <div class="gallery__item gallery__item--wide reveal">
+        <picture>
+          <source srcset="images/food6.webp" type="image/webp">
+          <img src="images/food6.jpg" alt="Plato de pasta artesanal con salsa vibrante" loading="lazy" decoding="async" width="800" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item reveal">
+        <picture>
+          <source srcset="images/food7.webp" type="image/webp">
+          <img src="images/food7.jpg" alt="Croissant recién horneado sobre plato de cerámica" loading="lazy" decoding="async" width="400" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item reveal">
+        <picture>
+          <source srcset="images/food8.webp" type="image/webp">
+          <img src="images/food8.jpg" alt="Selección de bollería artesanal de FLORA" loading="lazy" decoding="async" width="400" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item gallery__item--wide reveal">
+        <picture>
+          <source srcset="images/interior.webp" type="image/webp">
+          <img src="images/interior.jpg" alt="Interior luminoso de FLORA Cafe con mesas de madera y luz natural" loading="lazy" decoding="async" width="800" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item reveal">
+        <picture>
+          <source srcset="images/drink1.webp" type="image/webp">
+          <img src="images/drink1.jpg" alt="Cappuccino con latte art en cerámica artesanal" loading="lazy" decoding="async" width="400" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item reveal">
+        <picture>
+          <source srcset="images/food9.webp" type="image/webp">
+          <img src="images/food9.jpg" alt="Detalle de plato de brunch mediterráneo" loading="lazy" decoding="async" width="400" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item reveal">
+        <picture>
+          <source srcset="images/food10.webp" type="image/webp">
+          <img src="images/food10.jpg" alt="Preparación de pasta fresca en la cocina de FLORA" loading="lazy" decoding="async" width="400" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item gallery__item--wide reveal">
+        <picture>
+          <source srcset="images/exterior.webp" type="image/webp">
+          <img src="images/exterior.jpg" alt="Fachada de FLORA Cafe en Barcelona" loading="lazy" decoding="async" width="800" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item reveal">
+        <picture>
+          <source srcset="images/food11.webp" type="image/webp">
+          <img src="images/food11.jpg" alt="Detalle de croissant de pistacho con crema" loading="lazy" decoding="async" width="400" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item reveal">
+        <picture>
+          <source srcset="images/drink2.webp" type="image/webp">
+          <img src="images/drink2.jpg" alt="Matcha latte servido en cerámica artesanal" loading="lazy" decoding="async" width="400" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item reveal">
+        <picture>
+          <source srcset="images/food12.webp" type="image/webp">
+          <img src="images/food12.jpg" alt="Mesa de brunch con selección de platos de FLORA" loading="lazy" decoding="async" width="400" height="440">
+        </picture>
+      </div>
+
+      <div class="gallery__item reveal">
+        <picture>
+          <source srcset="images/food13.webp" type="image/webp">
+          <img src="images/food13.jpg" alt="Pasta pistacchiosa emplatada con elegancia" loading="lazy" decoding="async" width="400" height="440">
+        </picture>
+      </div>
+
+    </div><!-- /.gallery__grid -->
+
+    <div class="gallery__footer reveal">
+      <a
+        href="https://instagram.com/floracafe.barcelona"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn--outline"
+        data-i18n="gallery.instagram"
+        aria-label="Síguenos en Instagram — @floracafe.barcelona"
+        data-i18n-aria="gallery.instagram.aria">
+        Síguenos en Instagram
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── REVIEWS ────────────────────────────────────────────── -->
+<section id="reviews" class="section section--tinted">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-label reveal" data-i18n="reviews.label">Lo que dicen</span>
+      <h2 class="reveal--heading" data-i18n="reviews.heading">Nuestros clientes nos quieren</h2>
+      <!-- Average rating display -->
+      <div class="reviews__summary reveal" style="transition-delay:80ms">
+        <div class="reviews__stars" role="img" aria-label="4.8 sobre 5 estrellas en Google">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <span class="reviews__avg">4.8</span>
+        <span class="reviews__total">· 89 reseñas en Google</span>
+      </div>
+    </div>
+
+    <!-- UPDATE: Replace with real Google reviews before launch -->
+    <div class="reviews__grid stagger-group">
+
+      <article class="review-card reveal">
+        <div class="review-card__stars" role="img" aria-label="5 estrellas">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <blockquote>
+          <p class="review-card__text">"Flora se ha convertido en nuestro lugar favorito para el brunch del domingo. Los croissants son increíbles y el ambiente es precioso."</p>
+        </blockquote>
+        <footer class="review-card__footer">
+          <span class="review-card__author">María G.</span>
+          <span class="review-card__source">Google</span>
+        </footer>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-card__stars" role="img" aria-label="5 estrellas">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <blockquote>
+          <p class="review-card__text">"La pasta pistacchiosa es lo mejor que he probado en Barcelona. El espacio tiene una luz increíble y el café de especialidad es excelente."</p>
+        </blockquote>
+        <footer class="review-card__footer">
+          <span class="review-card__author">David S.</span>
+          <span class="review-card__source">Google</span>
+        </footer>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-card__stars" role="img" aria-label="5 estrellas">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <blockquote>
+          <p class="review-card__text">"Un café de ensueño. El cappuccino es perfecto, los croissants están siempre frescos y el equipo es absolutamente encantador."</p>
+        </blockquote>
+        <footer class="review-card__footer">
+          <span class="review-card__author">Emma R.</span>
+          <span class="review-card__source">Google</span>
+        </footer>
+      </article>
+
+      <article class="review-card reveal">
+        <div class="review-card__stars" role="img" aria-label="5 estrellas">
+          <span aria-hidden="true">★★★★★</span>
+        </div>
+        <blockquote>
+          <p class="review-card__text">"Ambiente agradable, buena música y una carta difícil de resistir. La carbonara es auténtica y la relación calidad-precio es muy buena."</p>
+        </blockquote>
+        <footer class="review-card__footer">
+          <span class="review-card__author">Carlos M.</span>
+          <span class="review-card__source">Google</span>
+        </footer>
+      </article>
+
+    </div><!-- /.reviews__grid -->
+
+    <div class="reviews__footer reveal">
+      <!-- UPDATE: Replace PLACEHOLDER with real Google Maps review link -->
+      <a
+        href="https://g.page/r/PLACEHOLDER/review"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="reviews__maps-link"
+        data-i18n="reviews.cta">
+        Ver todas las reseñas en Google ↗
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── FIND US ─────────────────────────────────────────────── -->
+<section id="find-us" class="section">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-label reveal" data-i18n="find.label">Encuéntranos</span>
+      <h2 class="reveal--heading" data-i18n="find.heading">Ven a visitarnos</h2>
+    </div>
+
+    <div class="find-us__grid">
+
+      <!-- Left: address + hours + WhatsApp -->
+      <div class="find-us__info">
+
+        <div class="find-us__block reveal">
+          <h3 class="find-us__block-title" data-i18n="find.address">Dirección</h3>
+          <!-- UPDATE: Real address before launch -->
+          <address>
+            Carrer de l&rsquo;Exemple, 42<br>
+            08009 Barcelona
+          </address>
+        </div>
+
+        <div class="find-us__block reveal" style="transition-delay:80ms">
+          <h3 class="find-us__block-title" data-i18n="find.hours">Horario</h3>
+          <dl class="hours__list">
+            <dt data-i18n="hours.wed_thu">Mié – Jue</dt><dd>9:00 – 17:00</dd>
+            <dt data-i18n="hours.fri_sun">Vie – Dom</dt><dd>9:00 – 18:00</dd>
+            <dt data-i18n="hours.mon_tue">Lun – Mar</dt><dd data-i18n="hours.closed">Cerrado</dd>
+          </dl>
+        </div>
+
+        <!-- WhatsApp reserve card -->
+        <div class="wa-card reveal" style="transition-delay:160ms">
+          <div class="wa-card__copy">
+            <p class="wa-card__label" data-i18n="find.wa.label">Reserva una mesa</p>
+            <p class="wa-card__sub" data-i18n="find.wa.sub">Rápido y fácil por WhatsApp</p>
+          </div>
+          <a
+            id="whatsapp-find-us"
+            href="https://wa.me/34600000000"
+            data-phone="+34600000000"
+            class="btn btn--wa"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="find.wa.cta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+
+      </div><!-- /.find-us__info -->
+
+      <!-- Right: map -->
+      <div class="find-us__map reveal" style="transition-delay:120ms">
+        <div class="map-wrap">
+          <!-- UPDATE: Replace with real Google Maps embed URL (maps/embed?pb= format) -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.5!2d2.1639!3d41.3888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIzJzIwLjkiTiAywr0wOSc1MC40IkU!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+            width="600"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa de FLORA Cafe en Barcelona"
+            aria-label="Mapa de FLORA Cafe en Barcelona">
+          </iframe>
+        </div>
+        <!-- UPDATE: Replace with real Google Maps link -->
+        <a
+          href="https://goo.gl/maps/PLACEHOLDER"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="find-us__maps-link"
+          data-i18n="find.maps">
+          Abrir en Google Maps ↗
+        </a>
+      </div>
+
+    </div><!-- /.find-us__grid -->
+  </div>
+</section>
+
+</main><!-- /#main -->
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer__top-rule" aria-hidden="true"></div>
+
+  <div class="container footer__inner">
+
+    <div class="footer__brand">
+      <p class="footer__name">FLORA</p>
+      <p class="footer__tagline" data-i18n="footer.tagline">Brunch · Pasta · Café</p>
+    </div>
+
+    <nav class="footer__nav" aria-label="Navegación del pie de página">
+      <a href="#about" data-i18n="nav.about">Nosotros</a>
+      <a href="#menu" data-i18n="nav.menu">Carta</a>
+      <a href="#gallery" data-i18n="nav.gallery">Galería</a>
+      <a href="#find-us" data-i18n="nav.find">Encuéntranos</a>
+      <a href="privacy.html" data-i18n="footer.privacy">Política de privacidad</a>
+    </nav>
+
+    <div class="footer__bottom">
+      <p class="footer__copy" data-i18n="footer.copy">© 2026 FLORA. Todos los derechos reservados.</p>
+      <div class="footer__lang nav__lang" role="group" aria-label="Idioma">
+        <button class="lang-btn lang-btn--footer lang-btn--active" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn lang-btn--footer" data-lang="ca" aria-pressed="false">CA</button>
+        <button class="lang-btn lang-btn--footer" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ============================================================
+     FIXED WIDGETS
+     ============================================================ -->
+
+<!-- Back to top -->
+<button
+  id="back-to-top"
+  class="back-to-top"
+  aria-label="Volver arriba"
+  data-i18n-aria="backtop.aria">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<!-- WhatsApp floating button -->
+<a
+  id="whatsapp-btn"
+  href="https://wa.me/34600000000"
+  data-phone="+34600000000"
+  class="whatsapp-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Reservar vía WhatsApp"
+  data-i18n-aria="whatsapp.aria">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ============================================================
+     COOKIE BANNER
+     ============================================================ -->
+<div
+  id="cookie-banner"
+  class="cookie-banner"
+  role="region"
+  aria-label="Aviso de cookies"
+  hidden>
+  <div class="container cookie-banner__inner">
+    <div class="cookie-banner__text">
+      <p data-i18n="cookie.text">Usamos cookies para analizar el tráfico y mejorar tu experiencia.</p>
+      <p><a href="privacy.html" class="cookie-privacy-link" data-i18n="footer.privacy">Política de privacidad</a></p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button id="cookie-necessary" class="btn btn--sm btn--outline-light" data-i18n="cookie.necessary">Solo necesarias</button>
+      <button id="cookie-accept" class="btn btn--sm btn--cta" data-i18n="cookie.accept">Aceptar todo</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script src="js/lenis.min.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/main.js" defer></script>
+
+</body>
+</html>

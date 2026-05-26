@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>L'Artisan Brunch</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#9bf0fa",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#006970",
+                        "surface-container": "#f3eed9",
+                        "primary-container": "#3b9ea7",
+                        "primary-fixed": "#94f1fb",
+                        "primary": "#006970",
+                        "secondary-container": "#fdc400",
+                        "surface-dim": "#dfdac6",
+                        "on-primary-fixed-variant": "#004f55",
+                        "on-primary-fixed": "#002022",
+                        "surface-container-high": "#ede8d3",
+                        "surface-bright": "#fffae4",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1d1c0f",
+                        "background": "#fffae4",
+                        "deep-teal": "#2A6E75",
+                        "warm-sand": "#EFEAD5",
+                        "surface-variant": "#e8e3ce",
+                        "on-surface-variant": "#3e494a",
+                        "primary-fixed-dim": "#77d5de",
+                        "on-tertiary-fixed-variant": "#004f55",
+                        "inverse-on-surface": "#f6f1dc",
+                        "secondary-fixed": "#ffdf96",
+                        "inverse-primary": "#77d5de",
+                        "tertiary-fixed-dim": "#7ed4dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#002023",
+                        "secondary": "#765a00",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#bdc9ca",
+                        "on-primary-container": "#002f33",
+                        "on-secondary-container": "#6c5200",
+                        "inverse-surface": "#333123",
+                        "surface": "#fffae4",
+                        "outline": "#6e797a",
+                        "on-tertiary-container": "#f5feff",
+                        "canvas": "#FFFFFF",
+                        "surface-container-highest": "#e8e3ce",
+                        "tertiary-container": "#1e8089",
+                        "on-secondary-fixed-variant": "#594400",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-container-low": "#f9f4df",
+                        "secondary-fixed-dim": "#f6bf00",
+                        "tertiary": "#00666e",
+                        "error": "#ba1a1a",
+                        "on-background": "#1d1c0f",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-lg": ["Be Vietnam Pro"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased">
+<!-- Top Navigation -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md shadow-sm transition-all duration-300">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md text-primary dark:text-tertiary-fixed tracking-tight hover:opacity-80 transition-opacity" href="#">
+                L'Artisan Brunch
+            </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary transition-colors text-label-lg font-label-lg" href="#">Our Story</a>
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary transition-colors text-label-lg font-label-lg" href="#">Menu</a>
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary transition-colors text-label-lg font-label-lg" href="#">Gallery</a>
+<a class="text-on-surface-variant dark:text-on-surface hover:text-primary transition-colors text-label-lg font-label-lg" href="#">Find Us</a>
+</div>
+<div class="hidden md:flex items-center">
+<button class="bg-[#FFC600] text-primary px-6 py-2.5 rounded-full text-label-lg font-label-lg hover:bg-secondary-fixed transition-colors shadow-sm">
+                    Book a Table
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-20 overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-6 max-w-xl">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background leading-tight">
+                        Lunch to <br/> <span class="text-primary italic">the rescue!</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        We’ll prepare something special for you. You’ve earned it. A taste of Mediterranean slow living in every bite.
+                    </p>
+<div class="pt-4 flex flex-wrap gap-4">
+<button class="bg-[#FFC600] text-primary px-8 py-3.5 rounded-full text-label-lg font-label-lg hover:bg-secondary-fixed transition-colors shadow-sm flex items-center gap-2 group">
+                            Book a Table
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative h-[400px] md:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl shadow-primary/5">
+<img alt="Placeholder image for hero section showcasing a vibrant, well-lit brunch spread on a light wooden table." class="w-full h-full object-cover rounded-2xl" data-alt="A vibrant, well-lit brunch spread on a light wooden table, featuring an artisanal pastry and a cup of cappuccino. The scene is shot from above, bathed in natural, warm sunlight creating soft, long shadows. The overall aesthetic is bright, inviting, and modern Mediterranean, perfectly aligned with a light-mode editorial design style using warm cream and subtle teal accents." src="https://lh3.googleusercontent.com/aida/ADBb0uhyX1JYIsqAVXlwaSxkX24n-HHjXUMCUZwCa4NCqeNVkDE6nRFmRuHcz5Nbg4O1bXRUUpcWw_jncie8pP6wkjzhIMpOO4_a5i8WZb-zs_sptGSVrKPse2pgDtPZ2EITmCcYr8-GCAHW91GzISswBvK54quox0evH18p_GLKDl7WMtIHPgHhGGp-FHmzKDGv6tLgNH7wynkfSvDxqGo-v_ziMFxDxKgTIfxEu5rH4kEjPuXKfI0kDb4DX6vk"/>
+</div>
+</div>
+<!-- Decorative background elements -->
+<div class="absolute top-[-10%] right-[-5%] w-[40vw] h-[40vw] bg-surface-container rounded-full blur-3xl opacity-50 -z-10"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[30vw] h-[30vw] bg-primary/5 rounded-full blur-3xl -z-10"></div>
+</section>
+<!-- Categories Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-surface-container/30">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Our Favorites</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Discover the buttery kings of continental breakfast and our fresh, authentic pasta dishes.</p>
+</div>
+<!-- Croissants -->
+<div class="mb-20">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline-md text-headline-md text-primary">Croissants</h3>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">View all <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface rounded-xl border border-surface-dim p-6 hover:shadow-[0_10px_40px_-10px_rgba(0,105,112,0.08)] transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden mb-6 bg-surface-container relative">
+<img alt="Placeholder for Custard Croissant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up, top-down shot of a golden-brown baked custard croissant sitting on a sleek, minimalist ceramic plate. The lighting is soft and natural, emphasizing the flaky texture of the pastry against a stark, pure white background. The overall mood is sophisticated and clean, perfectly suited for a high-end artisanal bakery menu in a modern, light-mode interface." src="https://lh3.googleusercontent.com/aida/ADBb0uiU3j_6KTkpgI3qOHpL5yRn3xCQi1kdxrEWcU_2dgn6R4UsATBHJFUYSHlQ1hxA_Wu4uIcYUbV4YNrdU6YlnhuFBAWgwV7cREpfsGqDNfpPx1YmjgZzClovHBmowWdlpNIUUQmwVXrA5K4tPRJ6q9kp--aiDniBYQrEuwnxIzkuq5gaP6BG3P-ziGuefxGZTGxzvDdylCVeZR8vA93pwIu3-kib7rv8zGsjJX7C9_vQkrY8KG4qQV_G-UM"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-2">Custard</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Classic buttery pastry filled with rich, smooth vanilla custard.</p>
+</div>
+<div class="bg-surface rounded-xl border border-surface-dim p-6 hover:shadow-[0_10px_40px_-10px_rgba(0,105,112,0.08)] transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden mb-6 bg-surface-container relative">
+<img alt="Placeholder for Chocolate Croissant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ugzkK1ou_ow4Dv4pMWAerHnAq0AqmM_NNA2m5nWkhECbEgiIwXbfzj8bTJ65DDkZ9wU6tCNu4GpscFwJXKtuCc7KP1kwt2V9zoRXQ-xjCQSQJhNkb1tHDKAM09BYwHB1o5K1Yxp1cwlYhmgcpjxOjJN8G29zoqXKnusD1S4yK4-cUccBI4V6wG0MaFZUA19SbTlCg7lk96l7-rYZUvhXekWpWcEdQQrbVTWuYCEDGEEW-FE2qWiS6KvbWFz"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-2">Chocolate</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Decadent dark chocolate encased in layers of crisp, golden dough.</p>
+</div>
+<div class="bg-surface rounded-xl border border-surface-dim p-6 hover:shadow-[0_10px_40px_-10px_rgba(0,105,112,0.08)] transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden mb-6 bg-surface-container relative">
+<img alt="Placeholder for Pistachio Croissant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ugefK6FFEX9RTKnQzpH0KHHCQ959lb1vlzu4b6nAQKgWL3pR8e4FD6xEXI7rgO037j_rGnbDhlhkTKm7MLWMEYUwH-GnfkLFirh7mI6lPnYBYlh31dvVTgJmofjL-ruSu9LfsEpU-hB7_sSCgLU_-SCOiaAfvZGsTuxdUNa5-C9xtSC4sF-5tEUKeu7UgA6E0NYEAqo63vr8f3eTGMnrgqXJ6MtlL7Kiurt2x2RXrnC1of7qrBmjSIw3Ws"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-2">Pistachio</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Signature pastry generously filled with sweet Sicilian pistachio cream.</p>
+</div>
+</div>
+</div>
+<!-- Pasta -->
+<div>
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline-md text-headline-md text-primary">Pasta</h3>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">View all <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface rounded-xl border border-surface-dim p-6 hover:shadow-[0_10px_40px_-10px_rgba(0,105,112,0.08)] transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden mb-6 bg-surface-container relative">
+<img alt="Placeholder for Pistacchiosa Pasta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A top-down, high-resolution shot of freshly prepared penne pasta coated in a rich, vibrant green pistachio sauce. The dish is presented in a dark, textured artisan ceramic bowl resting on a stark white background. The lighting is crisp and natural, highlighting the glossy sauce and crushed pistachio garnish, creating an elegant, premium culinary aesthetic suitable for a modern light-mode design." src="https://lh3.googleusercontent.com/aida/ADBb0uhl5HD1eURuWlnZQmeD2M1eq2m9E5JB4deipJ3kc4io8hENju7_ApM-GQZporDtmc4NSf2gscyfE1GCNc0Tjov5IXxFMjjHlCfvJ1PNXFqLpTVjrV6mTOuuTiMia6J8c4f3BlrlwWaW1GDqdpCW8TYW5Dsib14o7-dycj5NPd4Z44yUCKsWZFL7nMPTnYtNq1P7MMP_IYBLq2PSylO7U5BXsoCu9M1IAzuHw6Ovp0XPlfAeXREE-sUu-V4O"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-2">Pistacchiosa</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Unique savory pasta dish featuring our signature pistachio sauce.</p>
+</div>
+<div class="bg-surface rounded-xl border border-surface-dim p-6 hover:shadow-[0_10px_40px_-10px_rgba(0,105,112,0.08)] transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden mb-6 bg-surface-container relative">
+<img alt="Placeholder for Carbonara Pasta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ujQ6EaMT8pXbWTXE4Zn-xYjcliDqKpKyCEhQhmr8jVOkkWEdbwI_EtflfOmCmiSGKBtZWK4Zb3-w7sOPGh3TINiKXjBadaAy3NOI5VrIe1X8M0Uy6pMAp__2iU14WidIFO9d4NW9vJMhLjmWpdjuWe-t98bD-S1IDfMfAEwkScNRvRjexpNxuJBzUW-zbYBHi3ksbAMuV_vPYzLDqDhAzcVRzY_-U8r464En6u0TPMrB8DxiV_ct005yKoq"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-2">Carbonara</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Classic Roman recipe with crispy guanciale, pecorino, and egg yolk.</p>
+</div>
+<div class="bg-surface rounded-xl border border-surface-dim p-6 hover:shadow-[0_10px_40px_-10px_rgba(0,105,112,0.08)] transition-all duration-300 group">
+<div class="aspect-square rounded-lg overflow-hidden mb-6 bg-surface-container relative">
+<img alt="Placeholder for Pesto Pasta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uity_dn1SQQ_GkJgggQ93vUk172D4a9pyf1IfJN3pLA_xbmHnRmkCudpyY3-az0GBvf_hVBbkQmJZQW4VB5BjT2HCwV7LYcyjHHhDSFwS3StNUel3DOcoI1XhdmY3LDjVxu3qGRDZKB1oRQrE0vreDP85sXfGQsO9lWMxrSW17El5ONFsHqMGlSQKTrh3ONNnhq9jN_uAgBQlqUvkQTnxIQAwYvPDkDxu-dKYrVHQdPhucAVRgTDZccPniL"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-2">Pesto</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Fresh basil pesto, pine nuts, and parmigiano over perfectly al dente pasta.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Story Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative h-[500px] rounded-2xl overflow-hidden shadow-xl shadow-primary/5">
+<img alt="Placeholder for story section image" class="w-full h-full object-cover" data-alt="An atmospheric, softly lit interior shot of a modern, upscale cafe with Mediterranean design influences. Sunbeams filter through large windows, casting warm light onto minimalist wooden tables and textured, cream-colored walls. Subtle accents of deep teal can be seen in the furnishings. The mood is serene, inviting, and sophisticated, reflecting a premium artisanal slow-living aesthetic." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="space-y-8">
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary">Discover Our Story</h2>
+<div class="w-16 h-1 bg-secondary-container"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Located in the vibrant center of Malta, L'Artisan Brunch serves up coffee and pastries infused with the essence of Mediterranean style and taste. We believe in the tactile quality of a slow morning, where every detail is handcrafted with care.
+                    </p>
+<a class="inline-flex items-center gap-2 text-primary font-label-lg text-label-lg hover:text-tertiary transition-colors border-b-2 border-primary pb-1" href="#">
+                        Explore Our Journey
+                        <span class="material-symbols-outlined text-sm">east</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width border-t border-outline-variant dark:border-outline bg-surface-container dark:bg-inverse-surface mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="space-y-4">
+<div class="text-headline-md font-headline-md text-primary dark:text-tertiary-fixed mb-4">L'Artisan Brunch</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xs">
+                    Handcrafted with care. A premium brunch experience balancing traditional craftsmanship with a modern aesthetic.
+                </p>
+<p class="text-label-md font-label-md text-on-surface-variant/80 mt-6">
+                    © 2024 L'Artisan Brunch. Handcrafted with care.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="text-label-lg font-label-lg text-primary">Links</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-tertiary-fixed transition-colors text-body-md font-body-md inline-block opacity-80 hover:opacity-100" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-tertiary-fixed transition-colors text-body-md font-body-md inline-block opacity-80 hover:opacity-100" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-tertiary-fixed transition-colors text-body-md font-body-md inline-block opacity-80 hover:opacity-100" href="#">Press Kit</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-tertiary-fixed transition-colors text-body-md font-body-md inline-block opacity-80 hover:opacity-100" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-label-lg font-label-lg text-primary">Join our community</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">thumb_up</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">photo_camera</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
