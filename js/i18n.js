@@ -18,9 +18,10 @@ const translations = {
     'nav.aria':        'Navegación principal',
 
     /* Hero */
-    'hero.tagline': 'Brunch · Pasta · Café',
-    'hero.cta':     'Ver la carta',
-    'hero.cta2':    'Encuéntranos',
+    'hero.tagline':   'Brunch · Pasta · Café',
+    'hero.subtitle':  'El rincón del parque que siempre buscabas',
+    'hero.cta':       'Ver la carta',
+    'hero.cta2':      'Encuéntranos',
 
     /* About */
     'about.label':   'Nuestra historia',
@@ -95,9 +96,10 @@ const translations = {
     'nav.aria':        'Navegació principal',
 
     /* Hero */
-    'hero.tagline': 'Brunch · Pasta · Cafè',
-    'hero.cta':     'Veure la carta',
-    'hero.cta2':    'Troba\'ns',
+    'hero.tagline':   'Brunch · Pasta · Cafè',
+    'hero.subtitle':  'El racó del parc que sempre buscaves',
+    'hero.cta':       'Veure la carta',
+    'hero.cta2':      'Troba\'ns',
 
     /* About */
     'about.label':   'La nostra història',
@@ -172,9 +174,10 @@ const translations = {
     'nav.aria':        'Main navigation',
 
     /* Hero */
-    'hero.tagline': 'Brunch · Pasta · Café',
-    'hero.cta':     'See the Menu',
-    'hero.cta2':    'Find Us',
+    'hero.tagline':   'Brunch · Pasta · Café',
+    'hero.subtitle':  'The park corner you\'ve always been looking for',
+    'hero.cta':       'See the Menu',
+    'hero.cta2':      'Find Us',
 
     /* About */
     'about.label':   'Our Story',

@@ -679,14 +679,14 @@ h1, h2, h3, h4 {
 .lang-btn--footer.lang-btn--active { color: var(--gold); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); }
 
 /* ============================================================
-   HERO — full-bleed video with editorial bottom-aligned content
+   HERO — full-bleed video, logo upper-third, CTAs bottom
    ============================================================ */
 
 #hero {
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   overflow: hidden;
 }
 
@@ -712,15 +712,31 @@ h1, h2, h3, h4 {
   z-index: 1;
 }
 
-/* Content sits above overlay */
+/* Content sits above overlay — split top/bottom for upper-third logo */
 .hero__content {
   position: relative;
   z-index: 2;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   color: #fff;
-  padding-bottom: clamp(3.5rem, 8vw, 6rem);
+  padding-top: calc(var(--nav-h) + clamp(2.5rem, 6vw, 4.5rem));
   padding-inline: var(--pad-x);
+}
+
+.hero__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: clamp(3.5rem, 8vw, 6rem);
 }
 
 /* Logo — hero load-in animation */
@@ -733,7 +749,19 @@ h1, h2, h3, h4 {
   animation: hero-logo-in var(--dur-slow) var(--ease-out) 200ms both;
 }
 
-/* Tagline */
+/* Editorial subtitle — below logo, above descriptor */
+.hero__subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.2vw, 1.375rem);
+  font-weight: 600;
+  font-style: italic;
+  color: rgba(255,255,255,0.88);
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.55);
+  animation: hero-rise var(--dur-base) var(--ease-out) 400ms both;
+}
+
+/* Descriptor — BRUNCH · PASTA · CAFÉ */
 .hero__tagline {
   font-family: var(--font-heading);
   font-size: clamp(0.8125rem, 1.5vw, 1rem);
@@ -742,7 +770,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   color: rgba(255,255,255,0.72);
   margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
-  animation: hero-rise var(--dur-base) var(--ease-out) 500ms both;
+  animation: hero-rise var(--dur-base) var(--ease-out) 550ms both;
 }
 
 /* Hero CTAs */
@@ -751,7 +779,7 @@ h1, h2, h3, h4 {
   gap: var(--sp-3);
   justify-content: center;
   flex-wrap: wrap;
-  animation: hero-rise var(--dur-base) var(--ease-out) 650ms both;
+  animation: hero-rise var(--dur-base) var(--ease-out) 700ms both;
 }
 
 /* Scroll indicator */
