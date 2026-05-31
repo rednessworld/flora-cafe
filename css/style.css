@@ -1448,14 +1448,9 @@ h1, h2, h3, h4 {
    ============================================================ */
 
 .footer {
-  background: var(--inverse-bg);
+  background: var(--teal);
   color: rgba(255,255,255,0.65);
-  padding-block: clamp(3rem, 8vw, 5rem);
-}
-
-.footer__top-rule {
-  height: 1px;
-  background: var(--gold);
+  padding-block: clamp(2rem, 5vw, 3rem);
 }
 
 .footer__inner {
@@ -1463,13 +1458,12 @@ h1, h2, h3, h4 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: var(--sp-8);
-  padding-block-start: clamp(3rem, 8vw, 5rem);
+  gap: var(--sp-6);
 }
 
 .footer__name {
   font-family: var(--font-heading);
-  font-size: clamp(3.5rem, 10vw, 6rem);
+  font-size: clamp(2.1rem, 6vw, 3.6rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   color: #fff;
