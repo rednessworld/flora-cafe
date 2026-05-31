@@ -55,9 +55,10 @@
     "telephone": "+34600000000",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "<!-- UPDATE -->",
-      "postalCode": "<!-- UPDATE -->",
+      "streetAddress": "Passeig de Pujades, 21",
+      "postalCode": "08018",
       "addressLocality": "Barcelona",
+      "addressRegion": "Sant Martí",
       "addressCountry": "ES"
     },
     "servesCuisine": ["Brunch", "Pasta", "Café"],
@@ -65,15 +66,15 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Wednesday", "Thursday"],
-        "opens": "09:00",
-        "closes": "17:00"
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+        "opens": "09:30",
+        "closes": "23:30"
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Friday", "Saturday", "Sunday"],
-        "opens": "09:00",
-        "closes": "18:00"
+        "dayOfWeek": ["Friday", "Saturday"],
+        "opens": "09:30",
+        "closes": "00:00"
       }
     ],
     "aggregateRating": {
@@ -675,19 +676,18 @@
 
         <div class="find-us__block reveal">
           <h3 class="find-us__block-title" data-i18n="find.address">Dirección</h3>
-          <!-- UPDATE: Real address before launch -->
-          <address>
-            Carrer de l&rsquo;Exemple, 42<br>
-            08009 Barcelona
+          <address data-i18n="find.address.text">
+            Passeig de Pujades, 21<br>
+            Sant Martí, 08018 Barcelona
           </address>
         </div>
 
         <div class="find-us__block reveal" style="transition-delay:80ms">
           <h3 class="find-us__block-title" data-i18n="find.hours">Horario</h3>
           <dl class="hours__list">
-            <dt data-i18n="hours.wed_thu">Mié – Jue</dt><dd>9:00 – 17:00</dd>
-            <dt data-i18n="hours.fri_sun">Vie – Dom</dt><dd>9:00 – 18:00</dd>
-            <dt data-i18n="hours.mon_tue">Lun – Mar</dt><dd data-i18n="hours.closed">Cerrado</dd>
+            <dt data-i18n="hours.mon_thu">Lun – Jue</dt><dd>9:30 – 23:30</dd>
+            <dt data-i18n="hours.fri_sat">Vie – Sáb</dt><dd>9:30 – 00:00</dd>
+            <dt data-i18n="hours.sun">Dom</dt><dd>9:30 – 23:30</dd>
           </dl>
         </div>
 
@@ -717,21 +717,19 @@
       <!-- Right: map -->
       <div class="find-us__map reveal" style="transition-delay:120ms">
         <div class="map-wrap">
-          <!-- UPDATE: Replace with real Google Maps embed URL (maps/embed?pb= format) -->
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.5!2d2.1639!3d41.3888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIzJzIwLjkiTiAywr0wOSc1MC40IkU!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.5!2d2.18264!3d41.39064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3e383c9736b%3A0xf910193b1a0d38ec!2sFlora+Caf%C3%A8!5e0!3m2!1ses!2ses!4v1748700000000!5m2!1ses!2ses"
             width="600"
             height="450"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Mapa de FLORA Cafe en Barcelona"
-            aria-label="Mapa de FLORA Cafe en Barcelona">
+            title="Mapa de FLORA Cafè en Passeig de Pujades, Barcelona"
+            aria-label="Mapa de FLORA Cafè en Passeig de Pujades, Barcelona">
           </iframe>
         </div>
-        <!-- UPDATE: Replace with real Google Maps link -->
         <a
-          href="https://goo.gl/maps/PLACEHOLDER"
+          href="https://www.google.com/maps/place/Flora+Caf%C3%A8/@41.3904522,2.1841473,18z/data=!4m16!1m9!3m8!1s0x12a4a3e383c9736b:0xf910193b1a0d38ec!2sFlora+Caf%C3%A8!8m2!3d41.3906425!4d2.185292!9m1!1b1!16s%2Fg%2F11h6rvttm9!3m5!1s0x12a4a3e383c9736b:0xf910193b1a0d38ec!8m2!3d41.3906425!4d2.185292!16s%2Fg%2F11h6rvttm9?authuser=0&entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
           class="find-us__maps-link"

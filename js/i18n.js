@@ -59,20 +59,20 @@ const translations = {
     'review.4.author': 'Carlos M.',
 
     /* Find Us */
-    'find.label':   'Encuéntranos',
-    'find.heading': 'Ven a visitarnos',
-    'find.address': 'Dirección',
-    'find.hours':   'Horario',
-    'find.wa.label':'Reserva una mesa',
-    'find.wa.sub':  'Rápido y fácil por WhatsApp',
-    'find.wa.cta':  'Escribir por WhatsApp',
-    'find.maps':    'Abrir en Google Maps ↗',
+    'find.label':        'Encuéntranos',
+    'find.heading':      'Ven a visitarnos',
+    'find.address':      'Dirección',
+    'find.address.text': 'Passeig de Pujades, 21<br>Sant Martí, 08018 Barcelona',
+    'find.hours':        'Horario',
+    'find.wa.label':     'Reserva una mesa',
+    'find.wa.sub':       'Rápido y fácil por WhatsApp',
+    'find.wa.cta':       'Escribir por WhatsApp',
+    'find.maps':         'Abrir en Google Maps ↗',
 
     /* Hours */
-    'hours.wed_thu': 'Mié – Jue',
-    'hours.fri_sun': 'Vie – Dom',
-    'hours.mon_tue': 'Lun – Mar',
-    'hours.closed':  'Cerrado',
+    'hours.mon_thu': 'Lun – Jue',
+    'hours.fri_sat': 'Vie – Sáb',
+    'hours.sun':     'Dom',
 
     /* Footer */
     'footer.tagline': 'Brunch · Pasta · Café',
@@ -146,20 +146,20 @@ const translations = {
     'review.4.author': 'Carlos M.',
 
     /* Find Us */
-    'find.label':   'Troba\'ns',
-    'find.heading': 'Vine a visitar-nos',
-    'find.address': 'Adreça',
-    'find.hours':   'Horari',
-    'find.wa.label':'Reserva una taula',
-    'find.wa.sub':  'Ràpid i fàcil per WhatsApp',
-    'find.wa.cta':  'Escriure per WhatsApp',
-    'find.maps':    'Obrir a Google Maps ↗',
+    'find.label':        'Troba\'ns',
+    'find.heading':      'Vine a visitar-nos',
+    'find.address':      'Adreça',
+    'find.address.text': 'Passeig de Pujades, 21<br>Sant Martí, 08018 Barcelona',
+    'find.hours':        'Horari',
+    'find.wa.label':     'Reserva una taula',
+    'find.wa.sub':       'Ràpid i fàcil per WhatsApp',
+    'find.wa.cta':       'Escriure per WhatsApp',
+    'find.maps':         'Obrir a Google Maps ↗',
 
     /* Hours */
-    'hours.wed_thu': 'Dim – Dij',
-    'hours.fri_sun': 'Div – Diu',
-    'hours.mon_tue': 'Dil – Dim',
-    'hours.closed':  'Tancat',
+    'hours.mon_thu': 'Dl – Dj',
+    'hours.fri_sat': 'Dv – Ds',
+    'hours.sun':     'Dg',
 
     /* Footer */
     'footer.tagline': 'Brunch · Pasta · Cafè',
@@ -233,20 +233,20 @@ const translations = {
     'review.4.author': 'Carlos M.',
 
     /* Find Us */
-    'find.label':   'Find Us',
-    'find.heading': 'Come Visit FLORA',
-    'find.address': 'Address',
-    'find.hours':   'Opening Hours',
-    'find.wa.label':'Reserve a table',
-    'find.wa.sub':  'Quick and easy via WhatsApp',
-    'find.wa.cta':  'Message on WhatsApp',
-    'find.maps':    'Open in Google Maps ↗',
+    'find.label':        'Find Us',
+    'find.heading':      'Come Visit FLORA',
+    'find.address':      'Address',
+    'find.address.text': 'Passeig de Pujades, 21<br>Sant Martí, 08018 Barcelona',
+    'find.hours':        'Opening Hours',
+    'find.wa.label':     'Reserve a table',
+    'find.wa.sub':       'Quick and easy via WhatsApp',
+    'find.wa.cta':       'Message on WhatsApp',
+    'find.maps':         'Open in Google Maps ↗',
 
     /* Hours */
-    'hours.wed_thu': 'Wed – Thu',
-    'hours.fri_sun': 'Fri – Sun',
-    'hours.mon_tue': 'Mon – Tue',
-    'hours.closed':  'Closed',
+    'hours.mon_thu': 'Mon – Thu',
+    'hours.fri_sat': 'Fri – Sat',
+    'hours.sun':     'Sun',
 
     /* Footer */
     'footer.tagline': 'Brunch · Pasta · Café',
