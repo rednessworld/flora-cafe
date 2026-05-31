@@ -19,7 +19,7 @@ const translations = {
     'nav.lang.aria':   'Idioma',
 
     /* Hero */
-    'hero.tagline':   'Brunch · Pasta · Café',
+    'hero.tagline':   'Brunch · Tapas · Café',
     'hero.subtitle':  'El rincón del parque que siempre buscabas',
     'hero.cta':       'Ver la carta',
     'hero.cta2':      'Encuéntranos',
@@ -108,7 +108,7 @@ const translations = {
     'nav.lang.aria':   'Idioma',
 
     /* Hero */
-    'hero.tagline':   'Brunch · Pasta · Cafè',
+    'hero.tagline':   'Brunch · Tapas · Cafè',
     'hero.subtitle':  'El racó del parc que sempre buscaves',
     'hero.cta':       'Veure la carta',
     'hero.cta2':      'Troba\'ns',
@@ -197,7 +197,7 @@ const translations = {
     'nav.lang.aria':   'Language',
 
     /* Hero */
-    'hero.tagline':   'Brunch · Pasta · Café',
+    'hero.tagline':   'Brunch · Tapas · Café',
     'hero.subtitle':  'The park corner you\'ve always been looking for',
     'hero.cta':       'See the Menu',
     'hero.cta2':      'Find Us',
