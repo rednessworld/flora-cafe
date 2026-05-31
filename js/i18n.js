@@ -75,7 +75,7 @@ const translations = {
     'hours.sun':     'Dom',
 
     /* Footer */
-    'footer.tagline': 'Brunch · Pasta · Café',
+    'footer.tagline': 'Brunch · Tapas · Café',
     'footer.privacy': 'Política de privacidad',
     'footer.copy':    `© ${new Date().getFullYear()} FLORA. Todos los derechos reservados.`,
 
@@ -162,7 +162,7 @@ const translations = {
     'hours.sun':     'Dg',
 
     /* Footer */
-    'footer.tagline': 'Brunch · Pasta · Cafè',
+    'footer.tagline': 'Brunch · Tapas · Cafè',
     'footer.privacy': 'Política de privacitat',
     'footer.copy':    `© ${new Date().getFullYear()} FLORA. Tots els drets reservats.`,
 
@@ -249,7 +249,7 @@ const translations = {
     'hours.sun':     'Sun',
 
     /* Footer */
-    'footer.tagline': 'Brunch · Pasta · Café',
+    'footer.tagline': 'Brunch · Tapas · Café',
     'footer.privacy': 'Privacy Policy',
     'footer.copy':    `© ${new Date().getFullYear()} FLORA. All rights reserved.`,
 
