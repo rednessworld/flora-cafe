@@ -33,8 +33,8 @@ const translations = {
     /* Menu */
     'menu.label':         'Lo que servimos',
     'menu.heading':       'La Carta',
-    'menu.tab.croissants':'Croissants',
-    'menu.tab.pasta':     'Pasta',
+    'menu.tab.croissants':'Brunch',
+    'menu.tab.pasta':     'Tapas',
     'menu.tab.drinks':    'Bebidas',
     'menu.tabs.aria':     'Categorías del menú',
 
@@ -111,8 +111,8 @@ const translations = {
     /* Menu */
     'menu.label':         'El que servim',
     'menu.heading':       'La Carta',
-    'menu.tab.croissants':'Croissants',
-    'menu.tab.pasta':     'Pasta',
+    'menu.tab.croissants':'Brunch',
+    'menu.tab.pasta':     'Tapas',
     'menu.tab.drinks':    'Begudes',
     'menu.tabs.aria':     'Categories del menú',
 
@@ -189,8 +189,8 @@ const translations = {
     /* Menu */
     'menu.label':         'What We Serve',
     'menu.heading':       'The Menu',
-    'menu.tab.croissants':'Croissants',
-    'menu.tab.pasta':     'Pasta',
+    'menu.tab.croissants':'Brunch',
+    'menu.tab.pasta':     'Tapas',
     'menu.tab.drinks':    'Drinks',
     'menu.tabs.aria':     'Menu categories',
 
