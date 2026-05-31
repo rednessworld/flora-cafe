@@ -85,9 +85,9 @@
   /* Hero overlay */
   --overlay-hero: linear-gradient(
     to top,
-    rgba(0,0,0,0.75) 0%,
-    rgba(0,0,0,0.35) 45%,
-    rgba(0,0,0,0.15) 100%
+    rgba(0,0,0,0.80) 0%,
+    rgba(0,0,0,0.50) 45%,
+    rgba(0,0,0,0.45) 100%
   );
 
   /* Star rating — WCAG AA on white */
