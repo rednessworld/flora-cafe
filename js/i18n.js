@@ -16,6 +16,7 @@ const translations = {
     'nav.toggle.open': 'Abrir menú',
     'nav.toggle.close':'Cerrar menú',
     'nav.aria':        'Navegación principal',
+    'nav.lang.aria':   'Idioma',
 
     /* Hero */
     'hero.tagline':   'Brunch · Pasta · Café',
@@ -75,9 +76,10 @@ const translations = {
     'hours.sun':     'Dom',
 
     /* Footer */
-    'footer.tagline': 'Brunch · Tapas · Café',
-    'footer.privacy': 'Política de privacidad',
-    'footer.copy':    `© ${new Date().getFullYear()} FLORA. Todos los derechos reservados.`,
+    'footer.tagline':  'Brunch · Tapas · Café',
+    'footer.privacy':  'Política de privacidad',
+    'footer.nav.aria': 'Navegación del pie de página',
+    'footer.copy':     `© ${new Date().getFullYear()} FLORA. Todos los derechos reservados.`,
 
     /* Cookie */
     'cookie.text':      'Usamos cookies para analizar el tráfico y mejorar tu experiencia.',
@@ -103,6 +105,7 @@ const translations = {
     'nav.toggle.open': 'Obrir menú',
     'nav.toggle.close':'Tancar menú',
     'nav.aria':        'Navegació principal',
+    'nav.lang.aria':   'Idioma',
 
     /* Hero */
     'hero.tagline':   'Brunch · Pasta · Cafè',
@@ -162,9 +165,10 @@ const translations = {
     'hours.sun':     'Dg',
 
     /* Footer */
-    'footer.tagline': 'Brunch · Tapas · Cafè',
-    'footer.privacy': 'Política de privacitat',
-    'footer.copy':    `© ${new Date().getFullYear()} FLORA. Tots els drets reservats.`,
+    'footer.tagline':  'Brunch · Tapas · Cafè',
+    'footer.privacy':  'Política de privacitat',
+    'footer.nav.aria': 'Navegació del peu de pàgina',
+    'footer.copy':     `© ${new Date().getFullYear()} FLORA. Tots els drets reservats.`,
 
     /* Cookie */
     'cookie.text':      'Fem servir cookies per analitzar el tràfic i millorar la teva experiència.',
@@ -190,6 +194,7 @@ const translations = {
     'nav.toggle.open': 'Open menu',
     'nav.toggle.close':'Close menu',
     'nav.aria':        'Main navigation',
+    'nav.lang.aria':   'Language',
 
     /* Hero */
     'hero.tagline':   'Brunch · Pasta · Café',
@@ -249,9 +254,10 @@ const translations = {
     'hours.sun':     'Sun',
 
     /* Footer */
-    'footer.tagline': 'Brunch · Tapas · Café',
-    'footer.privacy': 'Privacy Policy',
-    'footer.copy':    `© ${new Date().getFullYear()} FLORA. All rights reserved.`,
+    'footer.tagline':  'Brunch · Tapas · Café',
+    'footer.privacy':  'Privacy Policy',
+    'footer.nav.aria': 'Footer navigation',
+    'footer.copy':     `© ${new Date().getFullYear()} FLORA. All rights reserved.`,
 
     /* Cookie */
     'cookie.text':      'We use cookies to analyse traffic and improve your experience.',

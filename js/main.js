@@ -23,11 +23,38 @@
   const navList = document.getElementById('nav-links');
   if (!toggle || !navList) return;
 
-  /* On desktop the nav is always visible — never aria-hidden.
-     On mobile it's hidden until the toggle opens it. */
+  function getFocusable() {
+    return Array.from(
+      navList.querySelectorAll('a[href], button:not([disabled])')
+    ).filter(el => {
+      const s = window.getComputedStyle(el);
+      return s.display !== 'none' && s.visibility !== 'hidden';
+    });
+  }
+
+  function trapFocus(e) {
+    if (e.key !== 'Tab') return;
+    const els = getFocusable();
+    if (!els.length) return;
+    const first = els[0];
+    const last  = els[els.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  }
+
   function syncAriaHidden() {
     if (window.innerWidth >= 768) {
       navList.removeAttribute('aria-hidden');
+      /* Clean up dialog state if resized while menu was open */
+      if (navList.getAttribute('role') === 'dialog') {
+        navList.setAttribute('role', 'list');
+        navList.removeAttribute('aria-modal');
+        document.removeEventListener('keydown', trapFocus);
+        document.body.style.overflow = '';
+      }
     } else if (!navList.classList.contains('nav__links--open')) {
       navList.setAttribute('aria-hidden', 'true');
     }
@@ -36,20 +63,28 @@
   function openMenu() {
     navList.classList.add('nav__links--open');
     navList.removeAttribute('aria-hidden');
+    navList.setAttribute('role', 'dialog');
+    navList.setAttribute('aria-modal', 'true');
     toggle.setAttribute('aria-expanded', 'true');
     toggle.setAttribute('data-i18n-aria', 'nav.toggle.close');
     const t = (typeof translations !== 'undefined' && translations[getLang()]) || {};
     toggle.setAttribute('aria-label', t['nav.toggle.close'] || 'Cerrar menú');
     document.body.style.overflow = 'hidden';
+    const els = getFocusable();
+    if (els.length) els[0].focus();
+    document.addEventListener('keydown', trapFocus);
   }
 
   function closeMenu() {
     navList.classList.remove('nav__links--open');
+    navList.setAttribute('role', 'list');
+    navList.removeAttribute('aria-modal');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('data-i18n-aria', 'nav.toggle.open');
     const t = (typeof translations !== 'undefined' && translations[getLang()]) || {};
     toggle.setAttribute('aria-label', t['nav.toggle.open'] || 'Abrir menú');
     document.body.style.overflow = '';
+    document.removeEventListener('keydown', trapFocus);
     syncAriaHidden();
   }
 
@@ -65,7 +100,7 @@
     if (e.target.tagName === 'A' || e.target.closest('a')) closeMenu();
   });
 
-  /* Close on Escape */
+  /* Close on Escape — return focus to toggle */
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && navList.classList.contains('nav__links--open')) {
       closeMenu();

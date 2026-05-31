@@ -112,14 +112,14 @@
     <a href="#" class="nav__logo" aria-label="FLORA — Inicio">FLORA</a>
 
     <!-- Desktop links + mobile overlay -->
-    <ul class="nav__links" id="nav-links" role="list" aria-hidden="true">
+    <ul class="nav__links" id="nav-links" role="list">
       <li><a href="#about" data-i18n="nav.about">Nosotros</a></li>
       <li><a href="#menu" data-i18n="nav.menu">Carta</a></li>
       <li><a href="#gallery" data-i18n="nav.gallery">Galería</a></li>
       <li><a href="#find-us" data-i18n="nav.find">Encuéntranos</a></li>
       <!-- Mobile-only items -->
       <li class="nav__mobile-extra">
-        <div class="nav__lang" role="group" aria-label="Idioma">
+        <div class="nav__lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang.aria">
           <button class="lang-btn lang-btn--active" data-lang="es" aria-pressed="true">ES</button>
           <button class="lang-btn" data-lang="ca" aria-pressed="false">CA</button>
           <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
@@ -132,7 +132,7 @@
 
     <!-- Desktop right: lang + CTA -->
     <div class="nav__right">
-      <div class="nav__lang nav__lang--desktop" role="group" aria-label="Idioma">
+      <div class="nav__lang nav__lang--desktop" role="group" aria-label="Idioma" data-i18n-aria="nav.lang.aria">
         <button class="lang-btn lang-btn--active" data-lang="es" aria-pressed="true">ES</button>
         <button class="lang-btn" data-lang="ca" aria-pressed="false">CA</button>
         <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
@@ -191,7 +191,6 @@
         class="hero__logo"
         width="220"
         height="88"
-        fetchpriority="high"
         loading="eager"
         decoding="sync">
       <p class="hero__subtitle" data-i18n="hero.subtitle">El rincón del parque que siempre buscabas</p>
@@ -755,7 +754,7 @@
       <p class="footer__tagline" data-i18n="footer.tagline">Brunch · Pasta · Café</p>
     </div>
 
-    <nav class="footer__nav" aria-label="Navegación del pie de página">
+    <nav class="footer__nav" aria-label="Navegación del pie de página" data-i18n-aria="footer.nav.aria">
       <a href="#about" data-i18n="nav.about">Nosotros</a>
       <a href="#menu" data-i18n="nav.menu">Carta</a>
       <a href="#gallery" data-i18n="nav.gallery">Galería</a>
@@ -765,7 +764,7 @@
 
     <div class="footer__bottom">
       <p class="footer__copy" data-i18n="footer.copy">© 2026 FLORA. Todos los derechos reservados.</p>
-      <div class="footer__lang nav__lang" role="group" aria-label="Idioma">
+      <div class="footer__lang nav__lang" role="group" aria-label="Idioma" data-i18n-aria="nav.lang.aria">
         <button class="lang-btn lang-btn--footer lang-btn--active" data-lang="es" aria-pressed="true">ES</button>
         <button class="lang-btn lang-btn--footer" data-lang="ca" aria-pressed="false">CA</button>
         <button class="lang-btn lang-btn--footer" data-lang="en" aria-pressed="false">EN</button>
