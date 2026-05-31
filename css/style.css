@@ -1260,32 +1260,6 @@ h1, h2, h3, h4 {
    REVIEWS — 4 cards grid
    ============================================================ */
 
-.reviews__summary {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-3);
-  flex-wrap: wrap;
-  margin-top: var(--sp-4);
-}
-
-.reviews__stars {
-  color: var(--star-color);
-  font-size: 1.25rem;
-  letter-spacing: 2px;
-}
-
-.reviews__avg {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.reviews__total {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
 .reviews__grid {
   display: grid;
   gap: var(--sp-4);
@@ -1333,12 +1307,6 @@ h1, h2, h3, h4 {
   font-weight: 600;
   font-size: 0.875rem;
   color: var(--text);
-}
-
-.review-card__source {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  opacity: 0.7;
 }
 
 .reviews__footer {

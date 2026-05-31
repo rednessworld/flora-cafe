@@ -48,6 +48,15 @@ const translations = {
     'reviews.label':   'Lo que dicen',
     'reviews.heading': 'Nuestros clientes nos quieren',
     'reviews.cta':     'Ver todas las reseñas en Google ↗',
+    'review.stars':    '5 de 5 estrellas',
+    'review.1.text':   '"Flora se ha convertido en nuestro lugar favorito para el brunch del domingo. Los croissants son increíbles y el ambiente es precioso."',
+    'review.1.author': 'María G.',
+    'review.2.text':   '"La pasta pistacchiosa es lo mejor que he probado en Barcelona. El espacio tiene una luz increíble y el café de especialidad es excelente."',
+    'review.2.author': 'David S.',
+    'review.3.text':   '"Un café de ensueño. El cappuccino es perfecto, los croissants están siempre frescos y el equipo es absolutamente encantador."',
+    'review.3.author': 'Emma R.',
+    'review.4.text':   '"Ambiente agradable, buena música y una carta difícil de resistir. La carbonara es auténtica y la relación calidad-precio es muy buena."',
+    'review.4.author': 'Carlos M.',
 
     /* Find Us */
     'find.label':   'Encuéntranos',
@@ -126,6 +135,15 @@ const translations = {
     'reviews.label':   'El que diuen',
     'reviews.heading': 'Els nostres clients ens estimen',
     'reviews.cta':     'Veure totes les ressenyes a Google ↗',
+    'review.stars':    '5 de 5 estrelles',
+    'review.1.text':   '"Flora s\'ha convertit en el nostre lloc favorit per al brunch del diumenge. Els croissants són increïbles i l\'ambient és preciós."',
+    'review.1.author': 'María G.',
+    'review.2.text':   '"La pasta pistacchiosa és el millor que he tastat a Barcelona. L\'espai té una llum increïble i el cafè d\'especialitat és excel·lent."',
+    'review.2.author': 'David S.',
+    'review.3.text':   '"Un cafè de somni. El cappuccino és perfecte, els croissants sempre estan frescos i l\'equip és absolutament encantador."',
+    'review.3.author': 'Emma R.',
+    'review.4.text':   '"Ambient agradable, bona música i una carta difícil de resistir. La carbonara és autèntica i la relació qualitat-preu és molt bona."',
+    'review.4.author': 'Carlos M.',
 
     /* Find Us */
     'find.label':   'Troba\'ns',
@@ -204,6 +222,15 @@ const translations = {
     'reviews.label':   'What People Say',
     'reviews.heading': 'Our Guests Love Us',
     'reviews.cta':     'See all reviews on Google ↗',
+    'review.stars':    '5 out of 5 stars',
+    'review.1.text':   '"Flora has become our favourite spot for Sunday brunch. The croissants are incredible and the atmosphere is beautiful."',
+    'review.1.author': 'María G.',
+    'review.2.text':   '"The pistacchiosa pasta is the best thing I\'ve tried in Barcelona. The space has incredible light and the specialty coffee is excellent."',
+    'review.2.author': 'David S.',
+    'review.3.text':   '"A dream café. The cappuccino is perfect, the croissants are always fresh and the team is absolutely delightful."',
+    'review.3.author': 'Emma R.',
+    'review.4.text':   '"Pleasant atmosphere, good music and a menu that\'s hard to resist. The carbonara is authentic and the value for money is excellent."',
+    'review.4.author': 'Carlos M.',
 
     /* Find Us */
     'find.label':   'Find Us',
