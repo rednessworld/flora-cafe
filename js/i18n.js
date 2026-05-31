@@ -17,6 +17,7 @@ const translations = {
     'nav.toggle.close':'Cerrar menú',
     'nav.aria':        'Navegación principal',
     'nav.lang.aria':   'Idioma',
+    'nav.logo.aria':   'FLORA — Inicio',
 
     /* Hero */
     'hero.tagline':   'Brunch · Tapas · Café',
@@ -82,9 +83,13 @@ const translations = {
     'footer.copy':     `© ${new Date().getFullYear()} FLORA. Todos los derechos reservados.`,
 
     /* Cookie */
-    'cookie.text':      'Usamos cookies para analizar el tráfico y mejorar tu experiencia.',
-    'cookie.accept':    'Aceptar todo',
-    'cookie.necessary': 'Solo necesarias',
+    'cookie.text':        'Usamos cookies para analizar el tráfico y mejorar tu experiencia.',
+    'cookie.accept':      'Aceptar todo',
+    'cookie.necessary':   'Solo necesarias',
+    'cookie.banner.aria': 'Aviso de cookies',
+
+    /* Find us — map */
+    'find.map.aria': 'Mapa de FLORA Cafè en Passeig de Pujades, Barcelona',
 
     /* WhatsApp */
     'whatsapp.message': 'Hola, me gustaría hacer una reserva en FLORA.',
@@ -106,6 +111,7 @@ const translations = {
     'nav.toggle.close':'Tancar menú',
     'nav.aria':        'Navegació principal',
     'nav.lang.aria':   'Idioma',
+    'nav.logo.aria':   'FLORA — Inici',
 
     /* Hero */
     'hero.tagline':   'Brunch · Tapas · Cafè',
@@ -171,9 +177,13 @@ const translations = {
     'footer.copy':     `© ${new Date().getFullYear()} FLORA. Tots els drets reservats.`,
 
     /* Cookie */
-    'cookie.text':      'Fem servir cookies per analitzar el tràfic i millorar la teva experiència.',
-    'cookie.accept':    'Acceptar tot',
-    'cookie.necessary': 'Només necessàries',
+    'cookie.text':        'Fem servir cookies per analitzar el tràfic i millorar la teva experiència.',
+    'cookie.accept':      'Acceptar tot',
+    'cookie.necessary':   'Només necessàries',
+    'cookie.banner.aria': 'Avís de galetes',
+
+    /* Find us — map */
+    'find.map.aria': 'Mapa de FLORA Cafè al Passeig de Pujades, Barcelona',
 
     /* WhatsApp */
     'whatsapp.message': 'Hola, m\'agradaria fer una reserva a FLORA.',
@@ -195,6 +205,7 @@ const translations = {
     'nav.toggle.close':'Close menu',
     'nav.aria':        'Main navigation',
     'nav.lang.aria':   'Language',
+    'nav.logo.aria':   'FLORA — Home',
 
     /* Hero */
     'hero.tagline':   'Brunch · Tapas · Café',
@@ -260,9 +271,13 @@ const translations = {
     'footer.copy':     `© ${new Date().getFullYear()} FLORA. All rights reserved.`,
 
     /* Cookie */
-    'cookie.text':      'We use cookies to analyse traffic and improve your experience.',
-    'cookie.accept':    'Accept All',
-    'cookie.necessary': 'Necessary Only',
+    'cookie.text':        'We use cookies to analyse traffic and improve your experience.',
+    'cookie.accept':      'Accept All',
+    'cookie.necessary':   'Necessary Only',
+    'cookie.banner.aria': 'Cookie consent',
+
+    /* Find us — map */
+    'find.map.aria': 'Map of FLORA Cafè at Passeig de Pujades, Barcelona',
 
     /* WhatsApp */
     'whatsapp.message': 'Hello, I\'d like to make a reservation at FLORA.',
