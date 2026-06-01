@@ -527,7 +527,7 @@ h1, h2, h3, h4 {
 
 /* Small variant */
 .btn--sm {
-  min-height: 44px;
+  min-height: var(--touch-min);
   padding: 0.5rem 1rem;
   font-size: 0.8125rem;
 }

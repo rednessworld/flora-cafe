@@ -13,14 +13,14 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="FLORA — Brunch · Tapas · Café en Barcelona">
   <meta property="og:description" content="Croissants horneados cada mañana, pasta hecha a mano y café de especialidad. FLORA, Barcelona.">
-  <meta property="og:image" content="https://flora-bcn.vercel.app/images/exterior.webp">
+  <meta property="og:image" content="https://flora-bcn.vercel.app/images/og-image.jpg">
   <meta property="og:url" content="https://flora-bcn.vercel.app">
   <meta property="og:locale" content="es_ES">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="FLORA — Brunch · Tapas · Café en Barcelona">
-  <meta name="twitter:image" content="https://flora-bcn.vercel.app/images/exterior.webp">
+  <meta name="twitter:image" content="https://flora-bcn.vercel.app/images/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -31,7 +31,10 @@
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
   <!-- Preload hero poster — LCP candidate; fetchpriority="high" maximises priority -->
-  <link rel="preload" as="image" href="images/hero1.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image"
+        imagesrcset="images/Hero-mobile.webp 750w, images/hero1.webp 1920w"
+        imagesizes="(max-width: 767px) 750px, 1920px"
+        type="image/webp" fetchpriority="high">
 
   <!-- Preload heading font -->
   <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -52,7 +55,7 @@
     "@type": "Restaurant",
     "name": "FLORA",
     "url": "https://flora-bcn.vercel.app",
-    "image": "https://flora-bcn.vercel.app/images/exterior.webp",
+    "image": "https://flora-bcn.vercel.app/images/og-image.jpg",
     "telephone": "+34600000000",
     "address": {
       "@type": "PostalAddress",
@@ -170,8 +173,9 @@
 
   <div class="hero__bg" aria-hidden="true">
     <picture>
+      <source media="(max-width: 767px)" srcset="images/Hero-mobile.webp" type="image/webp">
       <source srcset="images/hero1.webp" type="image/webp">
-      <img src="images/hero1.png" alt="" class="hero__img" decoding="async" fetchpriority="high">
+      <img src="images/hero1.jpg" alt="" class="hero__img" decoding="async" fetchpriority="high">
     </picture>
     <div class="hero__overlay"></div>
   </div>
