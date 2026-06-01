@@ -973,7 +973,8 @@ h1, h2, h3, h4 {
   font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text-muted);
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
