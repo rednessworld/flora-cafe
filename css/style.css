@@ -258,7 +258,7 @@ html::before {
     url('../images/Background.png') type('image/png')
   );
   background-size: cover;
-  background-position: center;
+  background-position: left top;
   background-repeat: no-repeat;
   z-index: -1;
   pointer-events: none;
@@ -269,9 +269,10 @@ html::before {
   html::before { display: none; }
 
   #about, #menu, #gallery, #reviews, #find-us {
+    background-color: var(--cream);
     background-image: url('../images/Background.webp');
     background-size: cover;
-    background-position: center;
+    background-position: left top;
     background-repeat: no-repeat;
   }
 
