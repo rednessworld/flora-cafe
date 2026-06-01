@@ -669,9 +669,14 @@ h1, h2, h3, h4 {
   .nav__links a:not(.btn) {
     font-size: 1.125rem;
     justify-content: center;
-    color: var(--text);
+    color: var(--teal-dk);
     padding-block: var(--sp-2);
     width: 100%;
+  }
+
+  /* Override hero white-text rule when overlay is open */
+  #nav:not(.nav--scrolled) .nav__links--open a:not(.btn) {
+    color: var(--teal-dk);
   }
 
   .nav__links a:not(.btn):hover { color: var(--teal); }
@@ -680,6 +685,17 @@ h1, h2, h3, h4 {
     margin-top: var(--sp-2);
     width: 100%;
     max-width: 280px;
+    background: var(--teal);
+    color: #fff;
+    border-color: var(--teal);
+    box-shadow: 0 2px 12px rgba(0,105,112,0.20);
+  }
+
+  .nav__links .btn--cta:hover,
+  .nav__links .btn--cta:focus-visible {
+    background: var(--teal-dk);
+    border-color: var(--teal-dk);
+    box-shadow: 0 4px 20px rgba(0,105,112,0.30);
   }
 }
 
