@@ -264,19 +264,19 @@ html::before {
   pointer-events: none;
 }
 
-/* iOS Safari: position:fixed pseudo-elements don't work — apply texture per section instead */
+/* iOS Safari: position:fixed pseudo-elements don't work — apply texture once to body instead */
 @media (max-width: 768px) {
   html::before { display: none; }
 
-  #about, #menu, #gallery, #reviews, #find-us {
-    background-color: var(--cream);
+  body {
     background-image: url('../images/Background.webp');
     background-size: cover;
-    background-position: left top;
+    background-position: center top;
+    background-attachment: scroll;
     background-repeat: no-repeat;
   }
 
-  /* Tinted sections: restore sand-tint color on top of texture */
+  /* Tinted sections keep their own color; no background-image on individual sections */
   #menu, #reviews {
     background-color: var(--sand-tint);
   }
