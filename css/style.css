@@ -267,6 +267,7 @@ html::before {
 /* Desktop-only texture — disable pseudo-element on mobile */
 @media (max-width: 768px) {
   html::before { display: none; }
+  #about { background-color: var(--cream); }
 }
 
 body {
