@@ -1232,6 +1232,54 @@ h1, h2, h3, h4 {
   padding-top: 2px;
 }
 
+/* ── Menu sub-category headings ──────────────────────────── */
+.menu__subcat {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--sand);
+  margin: var(--sp-10) 0 var(--sp-5);
+}
+
+.menu__subcat:first-child { margin-top: 0; }
+
+.menu__subcat--minor {
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: var(--sp-6) 0 var(--sp-3);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--outline);
+}
+
+.menu__note {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--cream-dim);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--teal-mid);
+}
+
+.tapas-item__name-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-1);
+}
+
+.tapas-item__name-row .tapas-item__name { margin-bottom: 0; }
+
 /* ============================================================
    GALLERY — asymmetric 3-column editorial grid
    ============================================================ */

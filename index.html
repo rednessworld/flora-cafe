@@ -246,205 +246,932 @@
 
     <!-- Tab list -->
     <div class="menu__tabs" role="tablist" aria-label="Categorías del menú" data-i18n-aria="menu.tabs.aria">
-      <button class="menu__tab menu__tab--active" role="tab" aria-selected="true" aria-controls="panel-brunch" id="tab-brunch" data-i18n="menu.tab.croissants">Brunch</button>
-      <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-tapas" id="tab-tapas" tabindex="-1" data-i18n="menu.tab.pasta">Tapas</button>
-      <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-drinks" id="tab-drinks" tabindex="-1" data-i18n="menu.tab.drinks">Bebidas</button>
+      <button class="menu__tab menu__tab--active" role="tab" aria-selected="true"  aria-controls="panel-cafe"    id="tab-cafe"    data-i18n="menu.tab.cafe">CAFÉ</button>
+      <button class="menu__tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-dulces"  id="tab-dulces"  data-i18n="menu.tab.dulces">DULCES</button>
+      <button class="menu__tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-brunch"  id="tab-brunch"  data-i18n="menu.tab.croissants">BRUNCH</button>
+      <button class="menu__tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-tapas"   id="tab-tapas"   data-i18n="menu.tab.pasta">TAPAS</button>
+      <button class="menu__tab" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-bebidas" id="tab-bebidas" data-i18n="menu.tab.drinks">BEBIDAS</button>
     </div>
 
     <!-- Tab panels -->
     <div class="menu__panels">
 
-      <!-- Croissants -->
-      <div id="panel-brunch" role="tabpanel" aria-labelledby="tab-brunch">
-        <div class="menu__cards stagger-group">
+      <!-- ─── CAFÉ ──────────────────────────────────────────── -->
+      <div id="panel-cafe" role="tabpanel" aria-labelledby="tab-cafe">
 
-          <article class="menu-card reveal">
-            <div class="menu-card__img-wrap">
-              <picture>
-                <source srcset="images/food1.webp" type="image/webp">
-                <img src="images/food1.jpg" alt="Croissant de natilla con crema de vainilla" loading="lazy" decoding="async" width="400" height="400">
-              </picture>
-            </div>
-            <div class="menu-card__body">
-              <div class="menu-card__header">
-                <h3 class="menu-card__name">Custard</h3>
-                <span class="menu-card__price">€4.50</span>
-              </div>
-              <p class="menu-card__desc">Croissant clásico de mantequilla relleno de crema de vainilla.</p>
-            </div>
-          </article>
+        <h4 class="menu__subcat" data-i18n="menu.cat.cafe">CAFÉ · TÉS · INFUSIONES</h4>
 
-          <article class="menu-card reveal">
-            <div class="menu-card__img-wrap">
-              <picture>
-                <source srcset="images/food2.webp" type="image/webp">
-                <img src="images/food2.jpg" alt="Croissant de pistacho con crema siciliana" loading="lazy" decoding="async" width="400" height="400">
-              </picture>
-            </div>
-            <div class="menu-card__body">
-              <div class="menu-card__header">
-                <h3 class="menu-card__name">Pistacchio</h3>
-                <span class="menu-card__price">€5.00</span>
-              </div>
-              <p class="menu-card__desc">Relleno con auténtica crema de pistacho siciliano.</p>
-            </div>
-          </article>
-
-          <article class="menu-card reveal">
-            <div class="menu-card__img-wrap">
-              <picture>
-                <source srcset="images/food3.webp" type="image/webp">
-                <img src="images/food3.jpg" alt="Croissant de chocolate con chocolate negro" loading="lazy" decoding="async" width="400" height="400">
-              </picture>
-            </div>
-            <div class="menu-card__body">
-              <div class="menu-card__header">
-                <h3 class="menu-card__name">Chocolate</h3>
-                <span class="menu-card__price">€4.80</span>
-              </div>
-              <p class="menu-card__desc">Barras de chocolate negro envueltas en masa de hojaldre mantecosa.</p>
-            </div>
-          </article>
-
-          <article class="menu-card reveal">
-            <div class="menu-card__img-wrap">
-              <picture>
-                <source srcset="images/food4.webp" type="image/webp">
-                <img src="images/food4.jpg" alt="Croissant de mantequilla clásico" loading="lazy" decoding="async" width="400" height="400">
-              </picture>
-            </div>
-            <div class="menu-card__body">
-              <div class="menu-card__header">
-                <h3 class="menu-card__name">Mantequilla</h3>
-                <span class="menu-card__price">€3.80</span>
-              </div>
-              <p class="menu-card__desc">Croissant clásico francés de mantequilla, horneado fresco cada mañana.</p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-
-      <!-- Tapas -->
-      <div id="panel-tapas" role="tabpanel" aria-labelledby="tab-tapas" class="menu__panel--hidden">
-
-        <!-- Featured tapas -->
-        <article class="tapas-featured reveal">
-          <div class="tapas-featured__img-wrap">
-            <picture>
-              <source srcset="images/food5.webp" type="image/webp">
-              <img src="images/food5.jpg" alt="Pasta Pistacchiosa — penne con crema de pistacho y pistachos tostados" loading="lazy" decoding="async" width="600" height="600">
-            </picture>
-          </div>
-          <div class="tapas-featured__body">
-            <span class="tapas-badge">Chef&rsquo;s Signature</span>
-            <h3 class="tapas-featured__name">Pistacchiosa</h3>
-            <p class="tapas-featured__desc">Artisan penne en nuestra emblemática crema de pistacho, coronado con pistachos tostados y triturados para dar textura. Un plato que enamora.</p>
-            <span class="tapas-featured__price">€16.50</span>
-          </div>
-        </article>
-
-        <!-- Tapas list -->
         <div class="tapas-list stagger-group">
 
           <article class="tapas-item reveal">
             <div class="tapas-item__body">
-              <h3 class="tapas-item__name">Carbonara</h3>
-              <p class="tapas-item__desc">Guanciale, pecorino romano, yema de huevo, pimienta negra.</p>
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.solo">Café solo</h3>
             </div>
-            <span class="tapas-item__price">€14.00</span>
+            <span class="tapas-item__price">€1.60</span>
           </article>
 
           <article class="tapas-item reveal">
             <div class="tapas-item__body">
-              <h3 class="tapas-item__name">Amatriciana</h3>
-              <p class="tapas-item__desc">Salsa de tomate, guanciale, pecorino romano, guindilla.</p>
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.cortado">Cortado</h3>
             </div>
-            <span class="tapas-item__price">€14.50</span>
+            <span class="tapas-item__price">€1.80</span>
           </article>
 
           <article class="tapas-item reveal">
             <div class="tapas-item__body">
-              <h3 class="tapas-item__name">Parmigiana</h3>
-              <p class="tapas-item__desc">Berenjenas en capas, salsa de tomate, mozzarella, parmesano.</p>
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.conleche">Café con leche</h3>
             </div>
-            <span class="tapas-item__price">€15.00</span>
+            <span class="tapas-item__price">€2.20</span>
           </article>
 
           <article class="tapas-item reveal">
             <div class="tapas-item__body">
-              <h3 class="tapas-item__name">Pesto</h3>
-              <p class="tapas-item__desc">Albahaca fresca, piñones, ajo, parmesano, aceite de oliva virgen extra.</p>
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.latte">Latte</h3>
             </div>
-            <span class="tapas-item__price">€13.50</span>
+            <span class="tapas-item__price">€2.40</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.americano">Americano</h3>
+            </div>
+            <span class="tapas-item__price">€2.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.cappuccino">Cappuccino</h3>
+            </div>
+            <span class="tapas-item__price">€2.80</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.carajillo">Carajillo</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.cafe.carajillo.desc">Baileys · Whiskey · Ron</p>
+            </div>
+            <span class="tapas-item__price">€3.70</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.iced">Iced Latte</h3>
+            </div>
+            <span class="tapas-item__price">€3.70</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.doble">Espresso doble</h3>
+            </div>
+            <span class="tapas-item__price">€2.60</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.flatwhite">Flat White</h3>
+            </div>
+            <span class="tapas-item__price">€3.40</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.chai">Chai Latte</h3>
+            </div>
+            <span class="tapas-item__price">€3.80</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.dirtychai">Dirty Chai Latte</h3>
+            </div>
+            <span class="tapas-item__price">€4.30</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.matcha">Matcha Latte</h3>
+            </div>
+            <span class="tapas-item__price">€4.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.chocolate">Chocolate caliente</h3>
+            </div>
+            <span class="tapas-item__price">€3.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cafe.te">Tés e infusiones</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.cafe.te.desc">Manzanilla · Earl Grey floral · Té verde · Rooibos tropical · Té rojo · Poleo menta</p>
+            </div>
+            <span class="tapas-item__price">€3.00</span>
+          </article>
+
+        </div>
+
+        <p class="menu__note" data-i18n="menu.note.cafe.addons">Leche de avena / soja / sin lactosa +0.20 · Vainilla / caramelo +1</p>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.cold">BEBIDAS</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.agua">Agua</h3>
+              <p class="tapas-item__desc">0.5l / 1l</p>
+            </div>
+            <span class="tapas-item__price">€2 / €3</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.agua.gas">Agua con gas</h3>
+              <p class="tapas-item__desc">0.5l / 1l</p>
+            </div>
+            <span class="tapas-item__price">€2.50 / €3.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.fontdor">Agua Font d&rsquo;Or</h3>
+              <p class="tapas-item__desc">30cl</p>
+            </div>
+            <span class="tapas-item__price">€2.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vichy">Vichy Catalán</h3>
+            </div>
+            <span class="tapas-item__price">€2.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.refrescos">Ginger Beer · Lemonade · Fanta · Pomelo · Fuze Tea · Aquarius · Cacaolat</h3>
+            </div>
+            <span class="tapas-item__price">€2.50</span>
           </article>
 
         </div>
       </div>
 
-      <!-- Bebidas -->
-      <div id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" class="menu__panel--hidden">
-        <div class="menu__cards stagger-group">
+      <!-- ─── DULCES ─────────────────────────────────────────── -->
+      <div id="panel-dulces" role="tabpanel" aria-labelledby="tab-dulces" class="menu__panel--hidden">
 
-          <article class="menu-card reveal">
-            <div class="menu-card__img-wrap">
-              <picture>
-                <source srcset="images/drink1.webp" type="image/webp">
-                <img src="images/drink1.jpg" alt="Cappuccino con latte art sobre cerámica artesanal" loading="lazy" decoding="async" width="400" height="400">
-              </picture>
+        <h4 class="menu__subcat" data-i18n="menu.cat.dulces">DULCES CASEROS</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.granola">Granola casera</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.granola.desc">Con yogur natural, granola casera, frutas de temporada y miel</p>
             </div>
-            <div class="menu-card__body">
-              <div class="menu-card__header">
-                <h3 class="menu-card__name">Cappuccino</h3>
-                <span class="menu-card__price">€3.50</span>
-              </div>
-              <p class="menu-card__desc">Espresso de especialidad con microespuma de leche perfecta.</p>
-            </div>
+            <span class="tapas-item__price">€7.90</span>
           </article>
 
-          <article class="menu-card reveal">
-            <div class="menu-card__img-wrap">
-              <picture>
-                <source srcset="images/drink2.webp" type="image/webp">
-                <img src="images/drink2.jpg" alt="Matcha latte con leche de avena en vaso alto" loading="lazy" decoding="async" width="400" height="400">
-              </picture>
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.zanahoria">Tarta de zanahoria</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.zanahoria.desc">Glaseado con granola casera</p>
             </div>
-            <div class="menu-card__body">
-              <div class="menu-card__header">
-                <h3 class="menu-card__name">Matcha Latte</h3>
-                <span class="menu-card__price">€4.50</span>
-              </div>
-              <p class="menu-card__desc">Matcha ceremonial con leche de avena, caliente o frío.</p>
-            </div>
+            <span class="tapas-item__price">€5.90</span>
           </article>
 
-          <article class="menu-card reveal">
-            <div class="menu-card__img-wrap">
-              <picture>
-                <source srcset="images/drink3.webp" type="image/webp">
-                <img src="images/drink3.jpg" alt="Zumo de naranja recién exprimido en vaso de cristal" loading="lazy" decoding="async" width="400" height="400">
-              </picture>
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.banana">Banana bread</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.banana.desc">Con dulce de leche y banana caramelizada</p>
             </div>
-            <div class="menu-card__body">
-              <div class="menu-card__header">
-                <h3 class="menu-card__name">Zumo de Naranja</h3>
-                <span class="menu-card__price">€4.00</span>
-              </div>
-              <p class="menu-card__desc">Naranjas valencianas recién exprimidas, servido al momento.</p>
-            </div>
+            <span class="tapas-item__price">€5.90</span>
           </article>
 
-          <article class="menu-card reveal">
-            <div class="menu-card__img-wrap menu-card__img-wrap--plain">
-              <div class="menu-card__img-placeholder" aria-hidden="true"></div>
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.brownie">Brownie</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.brownie.desc">Con helado de vainilla y frutas de temporada</p>
             </div>
-            <div class="menu-card__body">
-              <div class="menu-card__header">
-                <h3 class="menu-card__name">Café Filtro</h3>
-                <span class="menu-card__price">€2.80</span>
+            <span class="tapas-item__price">€6.40</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cookie">Chocolate chunk cookie XL</h3>
+            </div>
+            <span class="tapas-item__price">€3.60</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.croissant.dulce">Croissant dulce</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.croissant.dulce.desc">Con nutella o dulce de leche</p>
+            </div>
+            <span class="tapas-item__price">€3.60</span>
+          </article>
+
+        </div>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.zumos">ZUMOS NATURALES</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.limonada">Limonada casera</h3>
+              <p class="tapas-item__desc">45cl</p>
+            </div>
+            <span class="tapas-item__price">€3.90</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.naranja">Naranja</h3>
+              <p class="tapas-item__desc">23cl / 45cl</p>
+            </div>
+            <span class="tapas-item__price">€3.90 / €5.90</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.fresa">Fresa y plátano</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.fresa.desc">45cl · Con leche o zumo de naranja +1</p>
+            </div>
+            <span class="tapas-item__price">€5.90</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.verde">Verde</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.verde.desc">45cl · Manzana, pepino y apio</p>
+            </div>
+            <span class="tapas-item__price">€5.90</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vitamina">Vitamina</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.vitamina.desc">45cl · Naranja, zanahoria y jengibre</p>
+            </div>
+            <span class="tapas-item__price">€5.90</span>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ─── BRUNCH ─────────────────────────────────────────── -->
+      <div id="panel-brunch" role="tabpanel" aria-labelledby="tab-brunch" class="menu__panel--hidden">
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.tostadas">TOSTADAS</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.toast.aguacate">Tostada de aguacate</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.toast.aguacate.desc">Aguacate, tomate cherry, queso feta y cebollino · +dos huevos pochados o salmón +3</p>
+            </div>
+            <span class="tapas-item__price">€7.90</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.toast.setas">Tostada con mix de setas</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.toast.setas.desc">Mix de setas en reducción de salsa de soja y aguacate</p>
+            </div>
+            <span class="tapas-item__price">€9.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.toast.burrata">Tostada de burrata</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.toast.burrata.desc">Burrata de búfala, tomate, albahaca y crema balsámica</p>
+            </div>
+            <span class="tapas-item__price">€10.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.toast.serrano">Tostada de jamón serrano</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.toast.serrano.desc">Jamón serrano, queso crema, rúcula, tomate cherry y pesto</p>
+            </div>
+            <span class="tapas-item__price">€9.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.bikini">Bikini</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.bikini.desc">Jamón york y doble queso edam</p>
+            </div>
+            <span class="tapas-item__price">€4.20</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.flora.croissant">Flora croissant</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.flora.croissant.desc">Jamón york, queso edam, rúcula, aguacate y tomate cherry</p>
+            </div>
+            <span class="tapas-item__price">€6.90</span>
+          </article>
+
+        </div>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.sandwiches">SANDWICHES</h4>
+        <p class="menu__note" data-i18n="menu.note.sandwiches">Acompañados de patatas rústicas, con boniatos +1</p>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.bagel">Bagel de salmón</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.bagel.desc">Bagel de semillas con salmón ahumado, aguacate, rúcula, queso crema de eneldo y alcaparras</p>
+            </div>
+            <span class="tapas-item__price">€13.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.brioche">Brioche de pollo</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.brioche.desc">Pan brioche con pollo al horno, queso fundido, bacon, cebolla caramelizada, rúcula, tomate y mayonesa rosa casera</p>
+            </div>
+            <span class="tapas-item__price">€12.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <div class="tapas-item__name-row">
+                <h3 class="tapas-item__name" data-i18n="menu.item.grilled">Triple grilled cheese</h3>
+                <span class="tapas-badge">NEW</span>
               </div>
-              <p class="menu-card__desc">Café de origen único por goteo, preparado al momento.</p>
+              <p class="tapas-item__desc" data-i18n="menu.item.grilled.desc">Pan rústico con queso edam, brie y queso azul</p>
             </div>
+            <span class="tapas-item__price">€10.50</span>
+          </article>
+
+        </div>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.benedictos">HUEVOS BENEDICTOS</h4>
+        <p class="menu__note" data-i18n="menu.note.benedictos">De 9.30h a 16.00h — Dos huevos pochados sobre english muffin cubiertos de salsa holandesa y acompañados de patatas rústicas y ensalada, con boniatos +1</p>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.benedict.salmon">Salmón</h3>
+            </div>
+            <span class="tapas-item__price">€13.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.benedict.serrano">Jamón serrano</h3>
+            </div>
+            <span class="tapas-item__price">€12.90</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.benedict.aguacate">Aguacate</h3>
+            </div>
+            <span class="tapas-item__price">€12.90</span>
+          </article>
+
+        </div>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.especial">ESPECIAL DE INVIERNO</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.sopa">Sopa de tomate asado</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.sopa.desc">Servido con bikini de queso</p>
+            </div>
+            <span class="tapas-item__price">€9.50</span>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ─── TAPAS ──────────────────────────────────────────── -->
+      <div id="panel-tapas" role="tabpanel" aria-labelledby="tab-tapas" class="menu__panel--hidden">
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.tapas">TAPAS</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.olivas">Olivas</h3>
+            </div>
+            <span class="tapas-item__price">€3.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.frutos">Frutos secos</h3>
+            </div>
+            <span class="tapas-item__price">€3.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.pan.tomate">Pan con tomate</h3>
+            </div>
+            <span class="tapas-item__price">€4.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.bravas">Patatas bravas rústicas</h3>
+            </div>
+            <span class="tapas-item__price">€6.90</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.boniatos">Boniatos</h3>
+            </div>
+            <span class="tapas-item__price">€7.90</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <div class="tapas-item__name-row">
+                <h3 class="tapas-item__name" data-i18n="menu.item.dips">Plato de tres dips</h3>
+                <span class="tapas-badge">NEW</span>
+              </div>
+              <p class="tapas-item__desc" data-i18n="menu.item.dips.desc">Hummus de remolacha, guacamole y tzatziki servidos con crudités y pan de coca</p>
+            </div>
+            <span class="tapas-item__price">€12.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <div class="tapas-item__name-row">
+                <h3 class="tapas-item__name" data-i18n="menu.item.nachos">Nachos</h3>
+                <span class="tapas-badge">NEW</span>
+              </div>
+              <p class="tapas-item__desc" data-i18n="menu.item.nachos.desc">Tortillas de maíz, queso cheddar, guacamole, yogur, jalapeños y pico de gallo · con pollo asado +2.5</p>
+            </div>
+            <span class="tapas-item__price">€11.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.empanadas">Empanadas</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.empanadas.desc">Carne · Queso y cebolla · Espinaca</p>
+            </div>
+            <span class="tapas-item__price">€3.60</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.quesos">Tabla de quesos</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.quesos.desc">Brie, Roquefort, Manchego y Edam con uvas asadas, frutas de temporada, nueces y pan tostado</p>
+            </div>
+            <span class="tapas-item__price">€13.90</span>
+          </article>
+
+        </div>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.ensaladas">ENSALADAS</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.ensalada.cabra">Cabra</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.ensalada.cabra.desc">Rúcula y espinacas con queso de cabra, boniato asado, cebolla caramelizada, manzana, nueces, pasas y crema balsámica</p>
+            </div>
+            <span class="tapas-item__price">€12.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.ensalada.pollo">Pollo</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.ensalada.pollo.desc">Mâroûn, pollo al horno, aguacate, tomate cherry, mozzarella, pistachos y vinagreta de mostaza y miel</p>
+            </div>
+            <span class="tapas-item__price">€12.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.ensalada.burrata">Burrata de búfala</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.ensalada.burrata.desc">Rúcula y espinacas con burrata de búfala, uvas asadas, calabacín, pistachos, menta y crema balsámica</p>
+            </div>
+            <span class="tapas-item__price">€13.00</span>
+          </article>
+
+        </div>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.extras">EXTRAS</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.extra.aguacate">Aguacate</h3>
+            </div>
+            <span class="tapas-item__price">€2.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.extra.bacon">Bacon</h3>
+            </div>
+            <span class="tapas-item__price">€2.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.extra.salmon">Salmón</h3>
+            </div>
+            <span class="tapas-item__price">€3.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.extra.feta">Queso feta</h3>
+            </div>
+            <span class="tapas-item__price">€2.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.extra.pollo">Pollo</h3>
+            </div>
+            <span class="tapas-item__price">€2.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.extra.burrata">Burrata</h3>
+            </div>
+            <span class="tapas-item__price">€3.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.extra.serrano">Jamón Serrano</h3>
+            </div>
+            <span class="tapas-item__price">€2.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.extra.setas">Setas</h3>
+            </div>
+            <span class="tapas-item__price">€2.50</span>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ─── BEBIDAS ────────────────────────────────────────── -->
+      <div id="panel-bebidas" role="tabpanel" aria-labelledby="tab-bebidas" class="menu__panel--hidden">
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.vinos">VINOS</h4>
+
+        <div class="tapas-list stagger-group">
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vino.caliente">Vino Caliente Glögg</h3>
+            </div>
+            <span class="tapas-item__price">€6.50</span>
+          </article>
+        </div>
+
+        <h5 class="menu__subcat--minor" data-i18n="menu.cat.tintos">TINTOS</h5>
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vino.particular.tinto">Particular</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.vino.particular.tinto.desc">Cariñena · Garnacha</p>
+            </div>
+            <span class="tapas-item__price">€3.80 / €18</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vino.fulanito">Fulanito</h3>
+              <p class="tapas-item__desc">Ribera del Duero · Cabernet Sauvignon, Merlot, Tempranillo</p>
+            </div>
+            <span class="tapas-item__price">€4.20 / €20</span>
+          </article>
+
+        </div>
+
+        <h5 class="menu__subcat--minor" data-i18n="menu.cat.blancos">BLANCOS</h5>
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vino.particular.blanco">Particular</h3>
+              <p class="tapas-item__desc">Cariñena · Chardonnay</p>
+            </div>
+            <span class="tapas-item__price">€3.80 / €18</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vino.afortunado">Afortunado</h3>
+              <p class="tapas-item__desc">Rueda · Verdejo</p>
+            </div>
+            <span class="tapas-item__price">€4.20 / €20</span>
+          </article>
+
+        </div>
+
+        <h5 class="menu__subcat--minor" data-i18n="menu.cat.rosado">ROSADO</h5>
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vino.particular.rosado">Particular</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.vino.particular.rosado.desc">Cariñena · Garnacha</p>
+            </div>
+            <span class="tapas-item__price">€3.80 / €18</span>
+          </article>
+
+        </div>
+
+        <h5 class="menu__subcat--minor" data-i18n="menu.cat.cava">CAVA</h5>
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.cava.terra">Terra terrae</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.cava.terra.desc">Brut ecológico</p>
+            </div>
+            <span class="tapas-item__price">€4.00 / €18</span>
+          </article>
+
+        </div>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.cervezas">CERVEZAS</h4>
+
+        <h5 class="menu__subcat--minor" data-i18n="menu.cat.barril">BARRIL</h5>
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.moritz7">Moritz 7</h3>
+              <p class="tapas-item__desc">0.3l / 0.5l</p>
+            </div>
+            <span class="tapas-item__price">€3 / €5</span>
+          </article>
+
+        </div>
+
+        <h5 class="menu__subcat--minor" data-i18n="menu.cat.botellas">BOTELLAS</h5>
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.radler">Radler clara</h3>
+            </div>
+            <span class="tapas-item__price">€3.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.epidor">Epidor triple malta</h3>
+            </div>
+            <span class="tapas-item__price">€4.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.aigua.moritz">Aigua de Moritz</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.sinalcohol">Sin alcohol</p>
+            </div>
+            <span class="tapas-item__price">€3.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.corona">Corona</h3>
+            </div>
+            <span class="tapas-item__price">€4.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.ambar">Ambar</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.singluten">Sin gluten</p>
+            </div>
+            <span class="tapas-item__price">€3.50</span>
+          </article>
+
+        </div>
+
+        <h5 class="menu__subcat--minor" data-i18n="menu.cat.ogham">LATAS OGHAM — Artesanales, sin gluten</h5>
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.ogham.pilsen">Pilsen</h3>
+              <p class="tapas-item__desc">33cl / 44cl</p>
+            </div>
+            <span class="tapas-item__price">€4 / €5</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.ogham.red">Red Ale</h3>
+              <p class="tapas-item__desc">33cl / 44cl</p>
+            </div>
+            <span class="tapas-item__price">€4.50 / €5.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.ogham.ipa">IPA</h3>
+              <p class="tapas-item__desc">33cl / 44cl</p>
+            </div>
+            <span class="tapas-item__price">€4.50 / €5.50</span>
+          </article>
+
+        </div>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.aperitivos">APERITIVOS</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.spritz">Spritz</h3>
+              <p class="tapas-item__desc">Aperol · Limoncello · Campari · Cynar · Hugo</p>
+            </div>
+            <span class="tapas-item__price">€7.00</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.sangria">Sangría</h3>
+              <p class="tapas-item__desc">0.5l / 1l</p>
+            </div>
+            <span class="tapas-item__price">€9 / €18</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.sangria.cava">Sangría Cava</h3>
+              <p class="tapas-item__desc">0.5l / 1l</p>
+            </div>
+            <span class="tapas-item__price">€10 / €20</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.mimosa">Mimosa</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.mimosa.desc">Copa / 1l</p>
+            </div>
+            <span class="tapas-item__price">€4.50 / €20</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vermut.cinzano">Vermut Cinzano</h3>
+            </div>
+            <span class="tapas-item__price">€3.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vermut1757">Vermut 1757 Reserva</h3>
+            </div>
+            <span class="tapas-item__price">€4.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.americano.bev">Americano</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.americano.bev.desc">Campari, vermut, soda</p>
+            </div>
+            <span class="tapas-item__price">€6.50</span>
+          </article>
+
+        </div>
+
+        <h4 class="menu__subcat" data-i18n="menu.cat.cocktails">COCKTAILS</h4>
+
+        <div class="tapas-list stagger-group">
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.caipirinha">Caipirinha</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.caipirinha.desc">Cachaça, lima, azúcar</p>
+            </div>
+            <span class="tapas-item__price">€10</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.mojito">Mojito</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.mojito.desc">Ron, limón, azúcar, menta, soda</p>
+            </div>
+            <span class="tapas-item__price">€10</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.moscow">Moscow Mule</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.moscow.desc">Vodka, limón, ginger beer</p>
+            </div>
+            <span class="tapas-item__price">€10</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.darkstormy">Dark &amp; Stormy</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.darkstormy.desc">Ron, ginger beer</p>
+            </div>
+            <span class="tapas-item__price">€10</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.paloma">Paloma</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.paloma.desc">Tequila, limón, pomelo</p>
+            </div>
+            <span class="tapas-item__price">€10</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.negroni">Negroni</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.negroni.desc">Gin, Campari, vermut</p>
+            </div>
+            <span class="tapas-item__price">€12</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.espmartini">Espresso Martini</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.espmartini.desc">Vodka, licor de café, vainilla, espresso</p>
+            </div>
+            <span class="tapas-item__price">€12</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.devilsmarg">Devil&rsquo;s Margarita</h3>
+              <p class="tapas-item__desc" data-i18n="menu.item.devilsmarg.desc">Tequila, triple seco, limón, vino tinto seco</p>
+            </div>
+            <span class="tapas-item__price">€12</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.fernet">Fernet cola</h3>
+            </div>
+            <span class="tapas-item__price">€8</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.gin">Gin</h3>
+              <p class="tapas-item__desc">Tanqueray / Hendricks</p>
+            </div>
+            <span class="tapas-item__price">€8 / €10</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.ron">Ron</h3>
+              <p class="tapas-item__desc">Cacique / Barceló Añejo</p>
+            </div>
+            <span class="tapas-item__price">€8 / €9</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.whiskey">Whiskey</h3>
+              <p class="tapas-item__desc">Red Label / Bulleit Bourbon</p>
+            </div>
+            <span class="tapas-item__price">€8 / €9.50</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.vodka">Vodka</h3>
+              <p class="tapas-item__desc">Smirnoff / Cîroc</p>
+            </div>
+            <span class="tapas-item__price">€8 / €10</span>
+          </article>
+
+          <article class="tapas-item reveal">
+            <div class="tapas-item__body">
+              <h3 class="tapas-item__name" data-i18n="menu.item.tequila">Tequila / Mezcal</h3>
+              <p class="tapas-item__desc">Aluzar / Banhez</p>
+            </div>
+            <span class="tapas-item__price">€8 / €10</span>
           </article>
 
         </div>
