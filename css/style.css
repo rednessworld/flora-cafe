@@ -264,22 +264,9 @@ html::before {
   pointer-events: none;
 }
 
-/* iOS Safari: position:fixed pseudo-elements don't work — apply texture once to body instead */
+/* Desktop-only texture — disable pseudo-element on mobile */
 @media (max-width: 768px) {
   html::before { display: none; }
-
-  body {
-    background-image: url('../images/Background.webp');
-    background-size: cover;
-    background-position: center top;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-  }
-
-  /* Tinted sections keep their own color; no background-image on individual sections */
-  #menu, #reviews {
-    background-color: var(--sand-tint);
-  }
 }
 
 body {
