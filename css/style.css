@@ -264,24 +264,20 @@ html::before {
   pointer-events: none;
 }
 
-/* iOS Safari can't render position:fixed on pseudo-elements — apply texture to body instead */
+/* iOS Safari: position:fixed pseudo-elements don't work — apply texture per section instead */
 @media (max-width: 768px) {
   html::before { display: none; }
 
-  body {
-    background-image: url('../images/Background.png');
-    background-image: -webkit-image-set(
-      url('../images/Background.webp') type('image/webp'),
-      url('../images/Background.png') type('image/png')
-    );
-    background-image: image-set(
-      url('../images/Background.webp') type('image/webp'),
-      url('../images/Background.png') type('image/png')
-    );
-    background-attachment: scroll;
+  #about, #menu, #gallery, #reviews, #find-us {
+    background-image: url('../images/Background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  /* Tinted sections: restore sand-tint color on top of texture */
+  #menu, #reviews {
+    background-color: var(--sand-tint);
   }
 }
 
